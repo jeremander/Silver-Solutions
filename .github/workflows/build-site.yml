@@ -22,6 +22,7 @@ jobs:
         pip install staticjinja
     - name: Build site
       run: python build.py > output.log
+      working-directory: .
     - name: Print the log output
       shell: bash
       run: cat output.log
