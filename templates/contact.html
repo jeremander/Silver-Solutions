@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <section>
+        <header>
+          <h2>Contact Us</h2>
+        </header>
+      </section>
+      <form method="post" action="#">
+        <div class="row gtr-50 gtr-uniform">
+          <div class="col-6 col-12-narrower">
+            <input name="name" placeholder="Name" type="text" class="text" />
+          </div>
+          <div class="col-6 col-12-narrower">
+            <input name="email" placeholder="Email" type="text" class="text" />
+          </div>
+          <div class="col-12">
+            <textarea name="message" placeholder="Message"></textarea>
+          </div>
+          <div class="col-12">
+            <a href="#" class="button alt">Send Message</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock content %}

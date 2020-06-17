@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Concentric by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+
+{% set page_name = page_name | default(''.join(self._TemplateReference__context.name.split('.')[:-1])) %}
+
+<html>
+	<head>
+		<title>Silver Solutions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{STATIC}}/css/main.css" />
+
+    {% block description %}
+    <meta name="description" content="{{SITESUBTITLE}}" />
+    <meta name="keywords" content="silver, solutions, consulting, presentations"/>
+    {% endblock description %}
+
+  </head>
+
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+      <div id="header">
+        <div>
+
+          <!-- Logo -->
+          <div id="logo">
+            <h1><a href="index.html">Silver Solutions</a></h1>
+          </div>
+
+          <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              {% for page, value in PAGES.items() %}
+                <li {% if page.lower().startswith(page_name) %} class="current_page_item" {% endif %}>
+                {% if value is mapping %}
+                  <a href="#">{{page}}</a>
+                  <ul>
+                  {% for subpage, link in value.items() %}
+                    <li><a href="{{link}}">{{subpage}}</a></li>
+                  {% endfor %}
+                  </ul>
+                {% else %}
+                  <a href="{{value}}">{{page}}</a>
+                {% endif %}
+                </li>
+              {% endfor %}
+          </nav>
+
+        </div>
+      </div>
+
+      {% block content %}
+      {% endblock content %}
+
+			<!-- Footer -->
+      <section id="footer">
+        <div class="container">
+
+          <!-- Copyright -->
+          <div class="copyright">
+            &copy; {{YEAR}} {{SITENAME}}
+          </div>
+
+        </div>
+      </section>
+
+		</div>
+
+		<!-- Scripts -->
+    <script src="{{STATIC}}/js/jquery.min.js"></script>
+    <script src="{{STATIC}}/js/jquery.dropotron.min.js"></script>
+    <script src="{{STATIC}}/js/browser.min.js"></script>
+    <script src="{{STATIC}}/js/breakpoints.min.js"></script>
+    <script src="{{STATIC}}/js/util.js"></script>
+    <script src="{{STATIC}}/js/main.js"></script>
+
+	</body>
+</html>
