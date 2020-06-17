@@ -20,13 +20,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install staticjinja
-    - name: Build site from templates
-      run: python build.py
     - name: Build CSS from Sass
       uses: gha-utilities/sass-build@v0.2.5
       with:
         source: sass/main.scss
         destination: templates/static/css/main.css
+    - name: Build site from templates
+      run: python build.py
     - name: Test
       run: |
         pwd
