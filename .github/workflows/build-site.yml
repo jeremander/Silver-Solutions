@@ -9,8 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build site
-      uses: actions/build-site@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
         # Semantic version range syntax or exact version of a Python version
         python-version: '3.x'
