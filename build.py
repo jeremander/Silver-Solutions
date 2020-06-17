@@ -43,6 +43,6 @@ if __name__ == "__main__":
             site.render(use_reloader = True)
             proc.terminate()
     else:
-        subprocess.run(sass_args + ['--update'])
+        # subprocess.run(sass_args + ['--update'])
         print('Rendering site from templates...')
         site.render(use_reloader = False)
