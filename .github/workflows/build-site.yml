@@ -21,7 +21,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install staticjinja
     - name: Build site
-      run: python build.py > output.log
+      run: |
+        pwd
+        ls -la
+        python build.py > output.log
       working-directory: .
     - name: Print the log output
       shell: bash
