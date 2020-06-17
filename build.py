@@ -43,6 +43,9 @@ if __name__ == "__main__":
             site.render(use_reloader = True)
             proc.terminate()
     else:
-        # subprocess.run(sass_args + ['--update'])
+        try:
+            subprocess.run(sass_args + ['--update'])
+        except FileNotFoundError:
+            print('WARNING: failed to run sass')
         print('Rendering site from templates...')
         site.render(use_reloader = False)

@@ -33,3 +33,8 @@ jobs:
         ls -la
         ls -la templates
         ls -la templates/static/css
+    - name: Archive the compiled site
+      uses: actions/upload-artifact@v1
+      with:
+        name: output
+        path: output
