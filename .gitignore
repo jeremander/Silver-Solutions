@@ -6,4 +6,6 @@ __pycache__/
 *.pyc
 tmp*
 .DS_Store
-output/
+.sass-cache/
+concentric/
+templates/static/css/main.css*
