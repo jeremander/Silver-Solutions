@@ -5,7 +5,7 @@
 	License: pixelarity.com/license
 -->
 
-{% set page_name = page_name | default(''.join(self._TemplateReference__context.name.split('.')[:-1])) %}
+{% set page_name = page_name %}
 
 <html>
 	<head>
@@ -21,7 +21,7 @@
 
   </head>
 
-	<body class="homepage is-preload">
+	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
