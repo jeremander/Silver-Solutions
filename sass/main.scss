@@ -196,7 +196,11 @@
 
 	br.clear {
 		clear: both;
-	}
+    }
+
+    span.line {
+        display: inline-block;
+    }
 
 /* Row */
 
