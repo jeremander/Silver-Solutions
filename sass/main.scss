@@ -743,7 +743,7 @@ table {
     padding: 0.40em;
     border-radius: 50%;
     border: 1px solid #787777;
-    cursor: default;
+    cursor: pointer;
 }
 
 .icon {
@@ -1134,10 +1134,6 @@ table {
             font-size: 1em;
         }
 
-        // .bio-header {
-            // padding-bottom: 1em;
-        // }
-
         img.bio-pic {
             margin: 0px 0px 15px 15px;
             float: right;
@@ -1150,8 +1146,10 @@ table {
         text-align: center;
 
         img {
-            padding: 1em 0em 1.5em 0em;
+            margin: 1em 0em 2em 0em;
             width: 120px;
+            // box-shadow: 1px 1px;
+            box-shadow: -1px 0px 0px #aaaaaa, 4px 2px 2px #aaaaaa;
         }
     }
 }
