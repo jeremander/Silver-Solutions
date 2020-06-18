@@ -1114,7 +1114,8 @@ table {
         display: grid;
         width: 100%;
         grid-column-gap: 2em;
-        grid-template-columns: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     }
 
     .bio-header {
@@ -1138,7 +1139,8 @@ table {
         text-align: center;
 
         img {
-            width: 125px;
+            padding: 1em 0em 1.5em 0em;
+            width: 120px;
         }
     }
 }
@@ -1153,12 +1155,11 @@ table {
 
     > .container {
         background: map-get($palette, bg-dark);
-        // border: 1px solid map-get($palette, line-gray);
         border-radius: 1em;
     }
 
     section {
-        margin: 0;
+        margin: 0 !important;
     }
 
     header {
