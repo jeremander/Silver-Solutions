@@ -33,6 +33,7 @@ jobs:
         ls -la
         ls -la templates
         ls -la templates/static/css
+        ls -la output/
     # - name: Archive the compiled site
     #   uses: actions/upload-artifact@v1
     #   with:
@@ -42,7 +43,8 @@ jobs:
       run: |
         git config --local user.email 'action@github.com'
         git config --local user.name 'GitHub Action'
-        git commit -am 'Updated compiled CSS files.'
+        git add output/*
+        git commit -m 'Updated compiled CSS files.'
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
