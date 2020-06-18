@@ -40,7 +40,7 @@ jobs:
           ref: master
           fetch-depth: 1
     - name: Move compiled CSS to path within master branch
-      run: rsync /tmp/docs/ docs/
+      run: rsync -a /tmp/docs/ docs/
     # - name: Test2
     #   run: |
     #     pwd
