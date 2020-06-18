@@ -9,7 +9,7 @@ PAGES = {
     'Home' : 'index.html',
     'Our Services' : {
         'Slide Presentations' : 'presentations.html',
-        'Résumés & Interview Coaching' : 'resumes.html',
+        'Résumés' : 'resumes.html',
         'Facilitated Meetings' : 'meetings.html'
     },
     'About Us' : 'about.html',
