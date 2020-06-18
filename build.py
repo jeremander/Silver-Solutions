@@ -35,7 +35,7 @@ if __name__ == "__main__":
     sass_args.append('--watch' if args.watch else '--update')
     print(' '.join(sass_args))
 
-    site = Site.make_site(searchpath = 'templates', outpath = 'output', env_globals = CONTEXT, staticpaths = [f'static/'])
+    site = Site.make_site(searchpath = 'templates', outpath = 'docs', env_globals = CONTEXT, staticpaths = [f'static/'])
 
     if args.watch:
         with subprocess.Popen(sass_args) as proc:
