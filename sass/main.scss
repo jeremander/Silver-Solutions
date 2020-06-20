@@ -1061,6 +1061,10 @@ table {
     grid-column-gap: 1.5em;
     text-align: center;
 
+    &.col-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     &.col-3 {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1069,16 +1073,23 @@ table {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    div {
+        padding-bottom: 2em;
+    }
+
     h3 {
-        min-height: 3.5em;
         margin-bottom: 0.5em;
     }
 
+    &.two-line h3 {
+        min-height: 3.5em;
+    }
+
     @include breakpoint('<=narrower') {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
 
         > div {
-            padding-bottom: 2em;
+            padding-bottom: 1em;
         }
 
         h3 {
@@ -1148,6 +1159,8 @@ table {
             ul.alt li {
                 padding: 4px 6px 4px 6px;
                 cursor: pointer;
+                border: none;
+                border-radius: 8px;
             }
         }
 
@@ -1163,6 +1176,7 @@ table {
 
             article {
                 display: none;
+                margin-bottom: 1em;
 
                 &.visible {
                     display: block;
@@ -1186,8 +1200,6 @@ table {
                     li {
                         float: none;
                         display: inline-block;
-                        border: none;
-                        border-radius: 8px;
                         margin: 0.5em 0.75em 0.5em 0.75em;
                         a {
                             color: black;

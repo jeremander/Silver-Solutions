@@ -12,7 +12,7 @@
       <ul class="alt">
         <li class="subpage-link active"><a>Slide Presentations</a></li>
         <li class="subpage-link"><a>How We Work with You</a></li>
-        <li class="subpage-link"><a>Presentation Samples</a></li>
+        <li class="subpage-link"><a>Samples</a></li>
       </ul>
     </div>
 
@@ -26,7 +26,7 @@
           <h2 class="byline">Avoid the pitfalls of PowerPoint</h2>
         </header>
 
-        <div class="grid-container col-3">
+        <div class="grid-container col-3 two-line">
           <div>
             <h3>PowerPoint presentations from scratch</h3>
             <p>Develop concise, custom slides that <b>stay on point</b>, <b>hold attention</b>, and <b>tie directly to your goals</b>. Without overdoing dazzle, fly-ins, and clutter, add genuine vigor and visualization to your presentation.</p>
@@ -107,20 +107,4 @@ brand identity, and timeline. Brainstorm content ideas and agree on deliverables
   </div>
 </div>
 
-{% endblock %}
-
-
-{% block scripts %}
-<script>
-  $('.subpage-link').click(function() {
-    const li = $(this).closest('li');
-    const lis = $(this).closest('ul').children();
-    const i = lis.index(li);
-    lis.removeClass('active');
-    li.addClass('active');
-    const articles = $(this).closest('.left-sidebar').find('article');
-    articles.removeClass('visible');
-    $(articles.get(i)).addClass('visible');
-  });
-</script>
 {% endblock %}
