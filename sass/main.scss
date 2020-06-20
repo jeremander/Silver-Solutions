@@ -108,6 +108,7 @@ input, select, textarea {
 
 body {
     background: white;
+    // background-color: map-get($palette, bg-dark);
 
     // Stops initial animations until page loads.
         &.is-preload {
@@ -188,7 +189,7 @@ header {
 
     .byline {
         display: block;
-        padding: 1.2em 0 0.5em 0;
+        padding: 1em 0 0.5em 0;
         font-size: 1.3em;
         font-weight: 300;
     }
@@ -326,14 +327,11 @@ ul {
 
         > li {
             display: block;
-            border-top: solid 1px #aaa;
-            border-top-color: rgba(0, 0, 0, 0.1);
+            border-top: solid 1px rgba(0, 0, 0, 0.1);
             line-height: 2.5em;
             padding-left: 0;
-
-            &:first-child {
-                padding-top: 0;
-                border-top: 0;
+            &:last-child {
+                border-bottom: solid 1px rgba(0, 0, 0, 0.1);
             }
         }
 
@@ -998,39 +996,6 @@ table {
     }
 }
 
-/* Sidebar */
-
-#sidebar, #sidebar2 {
-    section {
-        margin-top: 4em;
-
-        &:first-child {
-            border-top: 0;
-            margin-top: 0;
-            padding-top: 0;
-        }
-    }
-
-    header {
-        margin-bottom: 2em;
-
-        h2 {
-            font-size: 1.6em;
-        }
-    }
-
-    .button {
-        margin: 2em 0em 0em 0em;
-    }
-
-    .default {
-        margin-top: 2em;
-
-        li {
-            text-align: left;
-        }
-    }
-}
 
 /* Intro */
 
@@ -1090,6 +1055,38 @@ table {
 
 /* Pages */
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 1.5em;
+    text-align: center;
+
+    &.col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    h3 {
+        min-height: 3.5em;
+        margin-bottom: 0.5em;
+    }
+
+    @include breakpoint('<=narrower') {
+        grid-template-columns: 1fr;
+
+        > div {
+            padding-bottom: 2em;
+        }
+
+        h3 {
+            min-height: 0;
+        }
+    }
+}
+
 .page-content {
     padding: 2em 0em 2em 0em;
     color: black;
@@ -1102,11 +1099,114 @@ table {
         font-size: 1.5em;
     }
 
-    .page-header {
+    h1, h2, h3 {
         text-align: center;
-        font-size: 2em;
-        font-weight: bold;
+    }
+
+    .page-header {
         padding-bottom: 1.5em;
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+
+    /* Sidebar */
+
+    .left-sidebar {
+        padding: 0em 2em 0em 2em;
+        display: grid;
+        grid-column-gap: 2.5em;
+        grid-template-columns: 12em 1fr;
+
+        .sidebar {
+            margin-top: 2em;
+
+            .subpage-link {
+
+                a:hover {
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background-color: map-get($palette, theme-light);
+                    a {
+                        color: white;
+                    }
+                }
+
+                &.active {
+                    background-color: map-get($palette, theme-medium);
+
+                    a {
+                        color: white;
+                    }
+                }
+            }
+
+            ul.alt li {
+                padding: 4px 6px 4px 6px;
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            header {
+                margin-bottom: 1em;
+            }
+
+            h3 {
+                font-weight: bold;
+                color: map-get($palette, theme-medium);
+            }
+
+            article {
+                display: none;
+
+                &.visible {
+                    display: block;
+                }
+            }
+        }
+
+        @include breakpoint('<=narrower') {
+            grid-template-columns: 1fr;
+
+            .sidebar {
+                margin: -2em -2em 3em -2em;
+                background-color: map-get($palette, light-gray);
+
+                ul.alt {
+                    display: block;
+                    list-style: none;
+                    margin: 0;
+                    text-align: center;
+
+                    li {
+                        float: none;
+                        display: inline-block;
+                        border: none;
+                        border-radius: 8px;
+                        margin: 0.5em 0.75em 0.5em 0.75em;
+                        a {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#callout {
+    background-color: map-get($palette, theme-medium);
+    color: white;
+    padding: 1em;
+    border-radius: 8px;
+
+    ul {
+        margin: 0;
     }
 }
 
@@ -1196,6 +1296,7 @@ table {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto auto 1fr;
+    background-color: white;
 }
 
 #footer {
@@ -1735,17 +1836,6 @@ table {
 
         .homepage #main {
             padding: 4em 0em 4em 0em;
-        }
-
-    /* Sidebar */
-
-        #sidebar, #sidebar2 {
-            .default {
-                li {
-                    display: block;
-                    text-align: left;
-                }
-            }
         }
 
     /* Staff */
