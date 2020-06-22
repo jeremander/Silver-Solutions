@@ -1114,8 +1114,13 @@ table {
         text-align: center;
     }
 
+    b {
+        font-weight: 900;
+    }
+
     .page-header {
         padding-bottom: 1.5em;
+        margin-bottom: 2em;
 
         h1 {
             font-size: 2em;
