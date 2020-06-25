@@ -616,7 +616,8 @@ form {
             color: black;
 
             &::placeholder {
-                color: map-get($palette, dark-gray);
+                color: black;
+                opacity: 0.6;
             }
         }
     }
@@ -637,7 +638,8 @@ form {
         color: #888787;
 
         &::placeholder {
-            color: map-get($palette, dark-gray);
+            color: black;
+            opacity: 0.6;
         }
     }
 
@@ -1276,11 +1278,13 @@ table {
 #contact {
     position: relative;
     padding: 3em 0em 3em 0em;
-    background: #fff;
+    // background: #fff;
+    background: map-get($palette, light-gray);
     text-align: center;
 
     > .container {
-        background: map-get($palette, bg-dark);
+        // background: map-get($palette, bg-dark);
+        background: map-get($palette, theme-dark);
         border-radius: 1em;
     }
 
@@ -1299,10 +1303,19 @@ table {
     form {
         padding-bottom: 20px;
 
-        .button {
+        button {
             color: black;
             background-color: map-get($palette, light-gray);
             border-color: map-get($palette, medium-gray);
+            cursor: pointer;
+        }
+
+        textarea {
+            color: black;
+
+            @include placeholder {
+                opacity: 0.5;
+            }
         }
     }
 }
