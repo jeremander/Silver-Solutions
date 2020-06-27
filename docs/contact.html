@@ -85,19 +85,19 @@
           <h2>Contact Us</h2>
         </header>
       </section>
-      <form method="post" action="#">
+      <form method="post" action="https://formspree.io/xjvaevaz" method="POST">
         <div class="row gtr-50 gtr-uniform">
           <div class="col-6 col-12-narrower">
-            <input name="name" placeholder="Name" type="text" class="text" />
+            <input name="name" placeholder="Name" type="text" class="text" required />
           </div>
           <div class="col-6 col-12-narrower">
-            <input name="email" placeholder="Email" type="text" class="text" />
+            <input name="_replyto" placeholder="Email" type="email" class="text" required />
           </div>
           <div class="col-12">
-            <textarea name="message" placeholder="Message"></textarea>
+            <textarea name="message" placeholder="Message" required></textarea>
           </div>
           <div class="col-12">
-            <a href="#" class="button alt">Send Message</a>
+            <button type="submit" class="button alt">Send Message</button>
           </div>
         </div>
       </form>
@@ -128,6 +128,9 @@
     <script src="static/js/util.js"></script>
     <script src="static/js/main.js"></script>
     <script src="static/js/misc.js"></script>
+
+    
+    
 
 	</body>
 </html>
