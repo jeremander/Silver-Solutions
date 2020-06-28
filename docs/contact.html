@@ -78,6 +78,7 @@
       
 
 <!-- Contact -->
+<div class="page-content">
   <div id="contact">
     <div class="container">
       <section>
@@ -86,7 +87,7 @@
         </header>
       </section>
       <form method="post" action="https://formspree.io/xjvaevaz" method="POST">
-        <div class="row gtr-50 gtr-uniform">
+        <!-- <div class="row gtr-50 gtr-uniform">
           <div class="col-6 col-12-narrower">
             <input name="name" placeholder="Name" type="text" class="text" required />
           </div>
@@ -99,10 +100,25 @@
           <div class="col-12">
             <button type="submit" class="button alt">Send Message</button>
           </div>
+        </div> -->
+        <div class="contact-grid">
+          <div id="contact-name">
+            <input name="name" placeholder="Name" type="text" class="text" required />
+          </div>
+          <div id="contact-email">
+            <input name="_replyto" placeholder="Email" type="email" class="text" required />
+          </div>
+          <div id="contact-message">
+            <textarea name="message" placeholder="Message" required></textarea>
+          </div>
+          <div id="contact-submit">
+            <button type="submit" class="button alt">Send Message</button>
+          </div>
         </div>
       </form>
     </div>
   </div>
+</div>
 
 
 
