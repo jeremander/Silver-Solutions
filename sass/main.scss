@@ -140,7 +140,6 @@ h1, h2, h3, h4, h5, h6 {
 
 strong, b {
     font-weight: 400;
-    color: #333131;
 }
 
 em, i {
@@ -255,6 +254,7 @@ span.line {
     @include breakpoint('<=mobile') {
         width: 90%;
     }
+
 }
 
 /* Sections/Articles */
@@ -1210,15 +1210,18 @@ table {
                 }
             }
 
-            #callout {
+            .callout {
                 background-color: map-get($palette, theme-medium);
                 color: white;
                 margin: 0em -0.5em 0em -0.5em;
                 padding: 1em;
 
                 b {
-                    color: inherit;
-                    font-style: italic;
+                    font-size: 1.25em;
+                }
+
+                em {
+                    font-weight: bold;
                 }
 
                 ul {
@@ -1281,7 +1284,7 @@ table {
                     }
                 }
 
-                #callout {
+                .callout {
                     margin: 0em -2em 0em -2em;
                     padding: 1em 2em 1em 2em;
                 }
@@ -1339,7 +1342,7 @@ table {
         display: grid;
         width: 100%;
         grid-column-gap: 2em;
-        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
         h2, h3 {
             font-weight: bold;
