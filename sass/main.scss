@@ -926,7 +926,7 @@ table {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto auto 1fr;
-    background-color: white;
+    background-color: map-get($palette, faint-gray);
 }
 
 /* Banner */
@@ -1105,7 +1105,6 @@ table {
 .page-content {
     padding: 1.5em 0em 1.5em 0em;
     color: black;
-    background-color: map-get($palette, faint-gray);
 
     h1 {
         font-size: 2em;
@@ -1124,7 +1123,7 @@ table {
     }
 
     .section-header {
-        margin-bottom: 2em;
+        margin-bottom: 1.5em;
 
         h1 {
             font-size: 2em;
@@ -1143,7 +1142,6 @@ table {
             background-color: map-get($palette, theme-pale);
             margin: -2em 0em -2em 0em;
             padding: 4em 0em 0em 0.75em;
-            // border-right: 1px solid map-get($palette, light-gray);
 
             ul {
                 width: 9.5em;
@@ -1301,14 +1299,30 @@ table {
             }
         }
 
+        @include breakpoint('<=narrower') {
+            .sidebar {
+                position: fixed;
+                height: 4em;
+
+                ul.alt {
+                    margin: 0.5em auto 0em auto;
+                    // padding: 0;
+                }
+            }
+
+            .content {
+                padding-top: 6em !important;
+            }
+        }
+
         @include breakpoint('<=mobile') {
             .sidebar {
                 position: fixed;
-                height: 6.25em;
+                height: 6.75em;
 
                 ul.alt {
                     position: relative;
-                    margin: 0.125em auto 0em auto;
+                    margin: 0.5em auto 0em auto;
                     padding: 0;
                     width: 20em;
 
@@ -1342,7 +1356,7 @@ table {
         display: grid;
         width: 100%;
         grid-column-gap: 2em;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 
         h2, h3 {
             font-weight: bold;
@@ -1378,54 +1392,117 @@ table {
     }
 }
 
+@include breakpoint('<=mobile') {
+    #about-us .column {
+        &:first-child {
+            border-bottom: solid 1px map-get($palette, light-gray);
+        }
+
+        &:last-child {
+            padding-top: 2.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #about-us .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* Contact */
 
 #contact {
     position: relative;
-    padding: 3em 0em 3em 0em;
-    background: map-get($palette, light-gray);
+    margin-top: 1em;
+    padding: 0;
     text-align: center;
 
     > .container {
-        // background: map-get($palette, bg-dark);
-        background: map-get($palette, theme-dark);
+        background-color: map-get($palette, theme-medium);
         border-radius: 1em;
-    }
 
-    section {
-        margin: 0 !important;
-    }
+        section {
+            margin: 0 !important;
+        }
 
-    header {
-        padding: 2em 0em 2em 0em;
+        header {
+            padding: 2em 0em 2em 0em;
 
-        h2 {
-            font-size: 2em;
-            font-weight: bold;
-            color: white;
+            h2 {
+                font-size: 2em;
+                font-weight: bold;
+                color: white;
+            }
+        }
+
+        form {
+            padding-bottom: 1em;
+            // height: 300px;
+            width: 100%;
+
+            .contact-grid {
+                display: grid;
+                margin: 0 auto;
+                width: 850px;
+                grid-row-gap: 1em;
+                grid-column-gap: 1em;
+                grid-template-rows: 2.5em 9em 4em;
+                grid-template-columns: 1fr 1fr;
+                padding: 0em 0.75em 0em 0.75em;
+                // background-color: cyan;
+
+                // div {
+                //     border: 1px solid black;
+                // }
+
+                input, textarea {
+                    background-color: white;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                #contact-message {
+                    grid-column-start: 1;
+                    grid-column-end: span 2;
+                    textarea {
+                        color: black;
+
+                        @include placeholder {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+
+                #contact-submit {
+                    grid-column-start: 1;
+                    grid-column-end: span 2;
+                    button {
+                        color: black;
+                        background-color: map-get($palette, light-gray);
+                        border-color: map-get($palette, medium-gray);
+                        cursor: pointer;
+                    }
+                }
+            }
+
         }
     }
+}
 
-    form {
-        padding-bottom: 20px;
+@include breakpoint('<=narrower') {
+    #contact .contact-grid {
+        width: 100% !important;
+        grid-template-rows: 4em 4em 12em 4em !important;
+
+        #contact-name, #contact-email {
+            grid-column-start: 1;
+            grid-column-end: span 2;
+        }
 
         button {
-            color: black;
-            background-color: map-get($palette, light-gray);
-            border-color: map-get($palette, medium-gray);
-            cursor: pointer;
-        }
-
-        input, textarea {
-            background-color: white;
-        }
-
-        textarea {
-            color: black;
-
-            @include placeholder {
-                opacity: 0.5;
-            }
+            // height: 4em;
         }
     }
 }
@@ -1673,7 +1750,7 @@ table {
     display: none;
 }
 
-@include breakpoint('<=mobile') {
+@include breakpoint('<=narrower') {
 
     /* Basic */
 

@@ -1,2 +1,3 @@
 - Test FF & Chrome
 - Logo
+- icon 3D effect for homepage links

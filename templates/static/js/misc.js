@@ -11,7 +11,8 @@ $('.subpage-link').click(function() {
   // const content = $('.info-page .content');
   const offset = parseInt($('.info-page .content').css('padding-top'), 10);
   // scrolls a little too far, so back up
-  window.scrollBy(0, -(offset + 10));
+  // window.scrollBy(0, -(offset + 10));
+  window.scrollBy(0, -offset);
 });
 
 // page section highlighting
