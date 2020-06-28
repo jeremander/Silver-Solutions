@@ -101,3 +101,11 @@ what you are looking for in your next job.</p>
 </div>
 
 {% endblock %}
+
+
+{% block scripts %}
+<script>
+  $('#header').addClass('hide-mobile');
+  setupPageSectionObserver();
+</script>
+{% endblock %}

@@ -1301,17 +1301,25 @@ table {
         @include breakpoint('<=mobile') {
             .sidebar {
                 position: fixed;
-                height: 4em;
+                height: 6.25em;
 
                 ul.alt {
                     position: relative;
-                    margin-top: 0.5em;
+                    margin: 0.125em auto 0em auto;
                     padding: 0;
+                    width: 20em;
+
+                    li {
+                        display: block;
+                        width: 14em;
+                        margin: 0 auto;
+                        padding: 0;
+                    }
                 }
             }
 
             .content {
-                padding-top: 6em !important;
+                padding-top: 8em !important;
             }
         }
 
@@ -1322,6 +1330,10 @@ table {
 /* About Us */
 
 #about-us {
+
+    h1 {
+        font-weight: bold;
+    }
 
     .two-column {
         display: grid;
@@ -1368,7 +1380,6 @@ table {
 #contact {
     position: relative;
     padding: 3em 0em 3em 0em;
-    // background: #fff;
     background: map-get($palette, light-gray);
     text-align: center;
 
@@ -1386,6 +1397,8 @@ table {
         padding: 2em 0em 2em 0em;
 
         h2 {
+            font-size: 2em;
+            font-weight: bold;
             color: white;
         }
     }
@@ -1398,6 +1411,10 @@ table {
             background-color: map-get($palette, light-gray);
             border-color: map-get($palette, medium-gray);
             cursor: pointer;
+        }
+
+        input, textarea {
+            background-color: white;
         }
 
         textarea {
