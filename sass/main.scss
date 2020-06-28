@@ -1448,14 +1448,9 @@ table {
                 width: 850px;
                 grid-row-gap: 1em;
                 grid-column-gap: 1em;
-                grid-template-rows: 2.5em 9em 4em;
+                grid-template-rows: 3em 9em 4em;
                 grid-template-columns: 1fr 1fr;
                 padding: 0em 0.75em 0em 0.75em;
-                // background-color: cyan;
-
-                // div {
-                //     border: 1px solid black;
-                // }
 
                 input, textarea {
                     background-color: white;
@@ -1493,16 +1488,12 @@ table {
 
 @include breakpoint('<=narrower') {
     #contact .contact-grid {
-        width: 100% !important;
-        grid-template-rows: 4em 4em 12em 4em !important;
+        width: 95% !important;
+        grid-template-rows: 3em 3em 12em 4em !important;
 
         #contact-name, #contact-email {
             grid-column-start: 1;
             grid-column-end: span 2;
-        }
-
-        button {
-            // height: 4em;
         }
     }
 }
