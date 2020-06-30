@@ -377,7 +377,6 @@ ul.featured {
 
     > li {
         display: inline-block;
-        // width: 22%;
         width: 30%;
         margin: 0% 1% 0% 1%;
         padding: 0em 0.50em;
@@ -388,8 +387,12 @@ ul.featured {
         font-weight: bold;
     }
 
-    p b {
-        color: map-get($palette, theme-medium);
+    p {
+        // text-align: left;
+
+        b {
+            color: map-get($palette, theme-medium);
+        }
     }
 }
 
@@ -787,6 +790,9 @@ table {
 
 #header {
     position: relative;
+    // position: fixed;
+    // width: 100%;
+    // top: 0;
     padding: 1.25em 1.5em 1.25em 1.5em;
     background-color: map-get($palette, bg-dark);
 
@@ -1355,12 +1361,21 @@ table {
     .two-column {
         display: grid;
         width: 100%;
-        grid-column-gap: 2em;
+        grid-gap: 2em;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        color: white;
+
+        .column {
+            background-color: map-get($palette, theme-medium);
+            border-radius: 6px;
+            padding: 0.75em;
+            box-shadow: 1px 1px 3px map-get($palette, medium-gray);
+        }
 
         h2, h3 {
             font-weight: bold;
             line-height: 1.25;
+            color: white;
         }
 
         h2 {
@@ -1386,20 +1401,7 @@ table {
         img {
             margin: 1em 0em 2em 0em;
             width: 120px;
-            // box-shadow: 1px 1px;
-            box-shadow: -1px 0px 0px #aaaaaa, 4px 2px 2px #aaaaaa;
-        }
-    }
-}
-
-@include breakpoint('<=mobile') {
-    #about-us .column {
-        &:first-child {
-            border-bottom: solid 1px map-get($palette, light-gray);
-        }
-
-        &:last-child {
-            padding-top: 2.5em;
+            box-shadow: -1px 0px 0px #808080, 3px 1px 2px #808080;
         }
     }
 }
