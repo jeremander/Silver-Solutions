@@ -8,10 +8,9 @@ $('.subpage-link').click(function() {
   window.localStorage.setItem('currentPageSection', i);
   const articles = $(this).closest('.info-page').find('article');
   $(articles.get(i))[0].scrollIntoView();
-  // const content = $('.info-page .content');
-  const offset = parseInt($('.info-page .content').css('padding-top'), 10);
-  // scrolls a little too far, so back up
-  // window.scrollBy(0, -(offset + 10));
+  const topbar = ($(window).width() <= 960) ? '.sidebar' : '#header';
+  const offset = $(topbar).outerHeight() + 12;
+  // compensate for nav bar height
   window.scrollBy(0, -offset);
 });
 
@@ -41,21 +40,6 @@ function setupPageSectionObserver() {
     observer.observe(this);
   });
 }
-
-// change the sidebar display when the top navbar goes in/out of view
-const navbar_observer = new IntersectionObserver(function(entries) {
-  const info_page = $('.info-page');
-  if (entries[0].isIntersecting) {
-    info_page.removeClass('nav-invisible');
-    info_page.addClass('nav-visible');
-  }
-  else {
-    info_page.removeClass('nav-visible');
-    info_page.addClass('nav-invisible');
-  }
-}, { threshold: [0] });
-
-navbar_observer.observe(document.querySelector('#nav'));
 
 $(document).ready(function() {
   highlightCurrentPageSection();
