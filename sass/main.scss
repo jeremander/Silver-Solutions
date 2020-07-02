@@ -1192,7 +1192,8 @@ table {
         }
 
         .content {
-            padding: 0em 0.5em 0.5em 0.5em;
+            // padding: 0em 0.5em 0.5em 0.5em;
+            padding: 0em 0.75em 0.75em 0.75em;
 
             h3 {
                 font-size: 1em;
@@ -1220,15 +1221,20 @@ table {
             .callout {
                 background-color: map-get($palette, theme-medium);
                 color: white;
-                margin: 0em -0.5em 0em -0.5em;
+                margin: 0em -0.75em 0em -0.75em;
                 padding: 1em;
 
-                b {
+                .big {
                     font-size: 1.25em;
                 }
 
+                // b {
+                //     font-size: 1.25em;
+                // }
+
                 em {
-                    font-weight: bold;
+                    // font-style: normal;
+                    font-weight: 900;
                 }
 
                 ul {
@@ -1325,6 +1331,40 @@ table {
             }
         }
 
+    }
+}
+
+/* Presentation slides */
+
+.pres-samples {
+    h2 {
+        margin: 1em 0em 1em 0em;
+    }
+
+    .pres-sample {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        padding: 0em 0.5em 1.25em 0.5em;
+        margin-bottom: 1.25em;
+        border-bottom: 1px solid map-get($palette, theme-medium);
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+        @include breakpoint('<=narrower') {
+            padding: 0em 0em 1.25em 0em;
+        }
+
+        div {
+            img {
+                display: block;
+                width: 100%;
+                border: 1px solid map-get($palette, light-gray);
+                box-shadow: 1px 1px 3px map-get($palette, medium-gray);
+            }
+        }
     }
 }
 

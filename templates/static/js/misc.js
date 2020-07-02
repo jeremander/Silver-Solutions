@@ -29,6 +29,7 @@ function highlightCurrentPageSection() {
 function setupPageSectionObserver() {
   const observer = new IntersectionObserver(function(entries) {
     const target = entries[0].target;
+    // alert(target);
     if (entries[0].isIntersecting) {
       const i = $(target).closest('.content').children().index(target);
       window.localStorage.setItem('currentPageSection', i);

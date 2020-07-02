@@ -22,6 +22,7 @@ CONTEXT = {
     'SITEURL' : '.',
     'STATIC' : 'static',
     'IMAGE' : 'static/images',
+    'SLIDES' : 'static/images/slides',
     'PAGES' : PAGES
 }
 

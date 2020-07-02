@@ -9,3 +9,5 @@ tmp*
 .sass-cache/
 concentric/
 templates/static/css/main.css*
+*.pptx
+*.ppt

@@ -27,13 +27,14 @@
         </header>
 
         <div class="callout">
+          <p class="big">Presentations bring in over <b>$100B in sales</b> annually, but...</p>
           <p>"PowerPoint is one of the most abused presentation tools in use today." <br>&nbsp; &nbsp; &nbsp; &nbsp; &mdash; almost everyone</p>
-          <p>There are approximately <b>500 million PowerPoint users</b> in the world. They do <b>35 million presentations each day.</b></p>
-          <p>About a million presentations are going on right now &mdash; <b>50% of them are unbearable.</b></p>
-          <p>The average PowerPoint slide length is 40 words, bloated with bullets, drowning in text, and displaying complicated charts that are impossible to read from the back of the room. Presenters digress from goals, overuse animation, and lose their audience.</p>
-          <hr>
-          <p>Presentations bring in over $100B in sales annually, so what can you do to <em>avoid this torture by PowerPoint</em> and <em>create slides that work?</em></p>
-          <p>Engage <em>Silver Solutions</em> to collaborate with you on your next presentation!</p>
+          <p>There are approximately <b class="big">500 million PowerPoint users</b> in the world. They do <b class="big">35 million presentations each day.</b></p>
+          <p>About a million presentations are going on right now &mdash; <b class="big">50% of them are unbearable.</b></p>
+          <p>The average PowerPoint slide length is 40 words, bloated with bullets, drowning in text, and displaying complicated charts that are impossible to read from the back of the room.</p>
+          <p>Presenters often <b class="big">digress from goals</b>, overuse animation, and ultimately <b class="big">lose their audience.</b></p>
+          <p class="big">Q: So what can you do to <em>avoid this torture by PowerPoint</em> and <em>create slides that work?</em></p>
+          <p class="big">A: Engage <em>Silver Solutions</em> to collaborate with you on your next presentation!</p>
         </div>
         <br>
 
@@ -95,13 +96,30 @@ brand identity, and timeline. Brainstorm content ideas and agree on deliverables
       <article>
 
         <header class="section-header">
-          <h1>Presentation Samples</h1>
+          <h1>Samples</h1>
         </header>
 
         <p>Are you presenting to potential clients, employees, steering committees, or a user conference? Do you want to persuade, inform, or entertain? We have created hundreds of presentations.</p>
 
-        <br>
-        <div class="callout">
+
+        <div class="pres-samples">
+
+          {% for (name, examples) in [('Sales and Marketing Pitches', ['med_management']), ('Training / Webinars', ['business_of_medicine', 'holistic_dentistry']), ('User Conferences', ['alayacare_conference', 'patient_experience']), ('Roasts, Toasts, and Celebrations', ['new_year_invitation_2020'])] %}
+            <div class="pres-sample-section">
+              <h2>{{name}}</h2>
+              {% for example in examples %}
+                <div class="pres-sample">
+                  {% for i in range(1, 5) %}
+                    <div><img src="{{SLIDES}}/{{example}}/Slide{{i}}.png"/></div>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+
+        </div>
+
+        <!-- <div class="callout">
           <ul>
             <li>Sales and marketing pitches</li>
             <li>Training/webinars</li>
@@ -110,7 +128,7 @@ brand identity, and timeline. Brainstorm content ideas and agree on deliverables
             <li>Employee meetings</li>
             <li>Roasts, toasts, and celebrations</li>
           </ul>
-        </div>
+        </div> -->
       </article>
 
     </div>
