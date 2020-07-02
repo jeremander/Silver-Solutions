@@ -1216,6 +1216,10 @@ table {
                         }
                     }
                 }
+
+                .article-separator {
+                    height: 0px;
+                }
             }
 
             .callout {
@@ -1227,10 +1231,6 @@ table {
                 .big {
                     font-size: 1.25em;
                 }
-
-                // b {
-                //     font-size: 1.25em;
-                // }
 
                 em {
                     // font-style: normal;

@@ -27,19 +27,40 @@ function highlightCurrentPageSection() {
 }
 
 function setupPageSectionObserver() {
+  $('.info-page article').each(function() {
+    $(this).prepend($('<div class="article-separator">'));
+    $(this).append($('<div class="article-separator">'));
+  });
+
+  const topbar = ($(window).width() <= 960) ? '.sidebar' : '#header';
+  const margin = $(topbar).outerHeight();
+
+  function elementOverlapsMidpoint() {
+    const rect = this.getBoundingClientRect();
+    const height = $(window).height();
+    const midpoint = margin + (height - margin) / 2.0;
+    const margin_top = parseFloat($(this).css('marginTop'));
+    const margin_bottom = parseFloat($(this).css('marginBottom'));
+    return ((rect.top - margin_top <= midpoint) && (midpoint <= rect.top + rect.height + margin_bottom));
+  };
+
   const observer = new IntersectionObserver(function(entries) {
     const target = entries[0].target;
-    // alert(target);
-    if (entries[0].isIntersecting) {
-      const i = $(target).closest('.content').children().index(target);
-      window.localStorage.setItem('currentPageSection', i);
-      highlightCurrentPageSection();
-    }
-  }, { threshold: [0.5] });
+    const article = $(target).parent();
+    const articles = $(target).closest('.content').children();
+    const overlaps = articles.map(elementOverlapsMidpoint);
+    const i = overlaps.index(true);
 
-  $('.info-page article').each(function() {
+    window.localStorage.setItem('currentPageSection', i);
+    highlightCurrentPageSection();
+  }, { threshold: [0.0, 0.1, 0.2, 0.3] });
+
+  const observe = function() {
     observer.observe(this);
-  });
+  }
+
+  $('.info-page article').each(observe);
+  $('.info-page .article-separator').each(observe);
 }
 
 $(document).ready(function() {
