@@ -1,4 +1,3 @@
-- icon 3D effect for homepage links
 - nicer font for titles
 - swap samples & how we work
 - Test FF & Chrome

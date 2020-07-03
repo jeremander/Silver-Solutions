@@ -388,7 +388,6 @@ ul.featured {
     }
 
     p {
-        // text-align: left;
 
         b {
             color: map-get($palette, theme-medium);
@@ -747,6 +746,17 @@ table {
     border-radius: 50%;
     border: 1px solid #787777;
     cursor: pointer;
+    box-shadow: 1px 1px 2px 1px map-get($palette, light-gray);
+
+    &:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 0px 0px 5px 1px map-get($palette, theme-medium);
+
+        .icon {
+            background-color: white;
+        }
+    }
+
 }
 
 .icon {
@@ -858,7 +868,6 @@ table {
 
     li {
         &:hover > {
-        // &.active:hover > {
             a, span {
                 background: map-get($palette, theme-light);
                 color: #fff;
@@ -996,7 +1005,7 @@ table {
 #main {
     position: relative;
     padding: 1.5em 0em 1.5em 0em;
-    background: #fff;
+    background: white;
     h3 {
         display: block;
         padding: 1em 0em 1em 0em;
@@ -1412,7 +1421,7 @@ table {
         img {
             margin: 1em 0em 2em 0em;
             width: 120px;
-            box-shadow: -1px 0px 0px #808080, 3px 1px 2px #808080;
+            box-shadow: -1px 0px 0px map-get($palette, dark-gray), 3px 1px 2px map-get($palette, dark-gray);
         }
     }
 }
@@ -1452,7 +1461,6 @@ table {
 
         form {
             padding-bottom: 1em;
-            // height: 300px;
             width: 100%;
 
             .contact-grid {
@@ -1867,7 +1875,6 @@ table {
         #page-wrapper {
             @include vendor('backface-visibility', 'hidden');
             @include vendor('transition', 'transform #{_duration(navPanel)} ease');
-            // padding-bottom: 1px;
         }
 
         #titleBar {
