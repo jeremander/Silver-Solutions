@@ -101,10 +101,9 @@ brand identity, and timeline. Brainstorm content ideas and agree on deliverables
 
         <p>Are you presenting to potential clients, employees, steering committees, or a user conference? Do you want to persuade, inform, or entertain? We have created hundreds of presentations.</p>
 
-
         <div class="pres-samples">
 
-          {% for (name, examples) in [('Sales and Marketing Pitches', ['med_management']), ('Training / Webinars', ['business_of_medicine', 'holistic_dentistry']), ('User Conferences', ['alayacare_conference', 'patient_experience']), ('Roasts, Toasts, and Celebrations', ['new_year_invitation_2020'])] %}
+          {% for (name, examples) in SLIDE_CATEGORIES.items() %}
             <div class="pres-sample-section">
               <h2>{{name}}</h2>
               {% for example in examples %}

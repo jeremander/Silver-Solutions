@@ -63,6 +63,30 @@ function setupPageSectionObserver() {
   $('.info-page .article-separator').each(observe);
 }
 
+$("#contact form").submit(function(e) {
+  e.preventDefault();
+
+  const contact = $('#contact')
+
+  $.ajax({
+    url: 'https://formspree.io/xjvaevaz',
+    method: 'POST',
+    data: {
+      name: contact.find('#contact-name input').val(),
+      _replyto: contact.find('#contact-email input').val(),
+      message: contact.find('#contact-message textarea').val(),
+    },
+    dataType: "json",
+    success: function() {
+      $('#submit-success').fadeIn(700, function () {
+        contact.find('textarea').val('');
+        contact.find('input').val('');
+      }).delay(1200).fadeOut(700);
+    }
+  });
+});
+
 $(document).ready(function() {
   highlightCurrentPageSection();
 });
+

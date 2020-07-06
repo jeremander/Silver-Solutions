@@ -1519,6 +1519,29 @@ table {
     }
 }
 
+#submit-success {
+    position: fixed;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    background-color: map-get($palette, theme-pale);
+    border: 3px solid map-get($palette, theme-dark);
+    border-radius: 5px;
+    color: map-get($palette, theme-dark);
+    padding: 0.75em;
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: bold;
+    display: none;
+}
+
+@include breakpoint('<=mobile') {
+    #submit-success {
+        left: 10%;
+        width: 80%;
+    }
+}
+
 /* Footer */
 
 #footer {

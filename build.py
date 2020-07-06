@@ -16,6 +16,13 @@ PAGES = {
     'Contact' : 'contact.html'
 }
 
+SLIDE_CATEGORIES = {
+    'Sales and Marketing Pitches' : ['med_management'],
+    'Training / Webinars' : ['business_of_medicine', 'holistic_dentistry'],
+    'User Conferences' : ['alayacare_conference', 'patient_experience'],
+    'Roasts, Toasts, and Celebrations' : ['new_year_invitation_2020']
+}
+
 CONTEXT = {
     'SITENAME' : 'Silver Solutions',
     'YEAR' : 2020,
@@ -23,6 +30,7 @@ CONTEXT = {
     'STATIC' : 'static',
     'IMAGE' : 'static/images',
     'SLIDES' : 'static/images/slides',
+    'SLIDE_CATEGORIES' : SLIDE_CATEGORIES,
     'PAGES' : PAGES
 }
 
