@@ -17,10 +17,11 @@ PAGES = {
 }
 
 SLIDE_CATEGORIES = {
-    'Sales and Marketing Pitches' : ['med_management'],
-    'Training and Webinars' : ['business_of_medicine', 'holistic_dentistry'],
+    'Sales and Marketing Pitches' : ['WF43', 'WF'],
+    # 'Sales and Marketing Pitches' : ['med_management'],
+    'Training and Webinars' : ['the_business_of_medicine', 'holistic_dentistry'],
     'User Conferences' : ['alayacare_conference', 'patient_experience'],
-    'Roasts, Toasts, and Celebrations' : ['new_year_invitation_2020']
+    'Roasts, Toasts, and Celebrations' : ['new_year_invitation_2020', '50th_anniversary']
 }
 
 CONTEXT = {
