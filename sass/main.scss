@@ -1324,15 +1324,21 @@ table {
                 &.presentations-banner {
                     .banner0 {
                         background-image: url(../images/banners/presentations0.jpg) !important;
-                        background-position: 50% 25%;
+                        background-position: 34% 25%;
+
 
                         h2 {
                             margin-top: 4em;
                         }
 
                         @include breakpoint('<=thin') {
-                            h2 {
-                                margin-top: 10em;
+                            div {
+                                left: 10%;
+                                width: 80% !important;
+
+                                h2 {
+                                    margin-top: 10em;
+                                }
                             }
                         }
 
@@ -1344,6 +1350,17 @@ table {
 
                         h2 {
                             margin-top: 8em;
+                        }
+
+                        @include breakpoint('<=thin') {
+                            div {
+                                left: 10%;
+                                width: 80% !important;
+
+                                h2 {
+                                    margin-top: 10em;
+                                }
+                            }
                         }
                     }
 
