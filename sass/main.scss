@@ -1,4 +1,5 @@
 @import 'libs/vars';
+@import 'libs/fonts';
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/vendor';
@@ -21,7 +22,8 @@ License: pixelarity.com/license
     narrow:     ( 961px,   1080px ),
     narrower:   ( 737px,   960px  ),
     mobile:     ( 553px,   736px  ),
-    thin:       ( null,    552px  ),
+    thin:       ( 481px,   552px  ),
+    tiny:       ( null,    480px  )
 ));
 
 // Reset.
@@ -996,7 +998,7 @@ table {
 #home-banner {
     width: 101%;  // why this is necessary?
     height: 450px;
-    background-position: center top;
+    background-position: 50% 12%;
     background-repeat: no-repeat;
     background-image: url(../images/banners/homepage.png);
     background-size: cover;
@@ -1006,8 +1008,9 @@ table {
     text-align: center;
 
     h2 {
+        padding: 0 0.5em;
         font-size: 3.5em;
-        font-family: Arial;
+        font-family: Montserrat;
         color: white;
         line-height: 1;
     }
@@ -1273,18 +1276,18 @@ table {
                             animation-name: bannerSlideFade;
                             animation-timing-function: ease-in-out;
                             animation-iteration-count: infinite;
-                            animation-duration: 12s;
+                            animation-duration: 13.5s;
 
                             &.banner0 {
                                 animation-delay: 0s;
                             }
 
                             &.banner1 {
-                                animation-delay: 4s;
+                                animation-delay: 4.5s;
                             }
 
                             &.banner2 {
-                                animation-delay: 8s;
+                                animation-delay: 9s;
                             }
 
                             div {
@@ -1300,7 +1303,7 @@ table {
                                     font-size: 1.8em;
                                     font-weight: bold;
                                     line-height: 1.5em;
-                                    padding: 0.25em 0.5em;
+                                    padding: 0.25em 0.25em;
                                     border-radius: 5px;
                                     background-color: #e6d6ffb6;
                                     color: black;
@@ -1352,8 +1355,8 @@ table {
                             width: 40% !important;
                         }
 
-                        @include breakpoint('<=thin') {
-                            background-position: 85% 100% !important;
+                        @include breakpoint('<=tiny') {
+                            background-position: 90% 100% !important;
                             div {
                                 right: 1em;
                                 width: 50% !important;
