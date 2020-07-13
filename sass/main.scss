@@ -99,13 +99,13 @@ input, select, textarea {
 
 // Set box model to border-box.
 // Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
-    html {
-        box-sizing: border-box;
-    }
+html {
+    box-sizing: border-box;
+}
 
-    *, *:before, *:after {
-        box-sizing: inherit;
-    }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 body {
     background: white;
@@ -1229,19 +1229,139 @@ table {
             }
 
             .info-page-banner {
-                height: 275px;
+                position: relative;
+                height: 325px;
+                min-width: 100%;
+                text-align: center;
+                display: table;
                 margin: 0em 0em 2em 0em;
-                background-image: url(../images/banner.jpg);
-                background-size: cover;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                padding: 0;
 
-                div {
-                    width: 65%;
-                    h2 {
-                        color: map-get($palette, theme-pale);
-                        line-height: 1.5em;
+                .inner {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    .banner-slides {
+
+                        @keyframes bannerSlideFade {
+                            0%, 100% {
+                                opacity: 1;
+                            }
+                            25% {
+                                opacity: 1;
+                            }
+                            33% {
+                                opacity: 0;
+                            }
+                            67% {
+                                opacity: 0;
+                            }
+                            92% {
+                                opacity: 0;
+                            }
+                        }
+
+                        .banner-slide {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-image: url(../images/banner.jpg);
+                            animation-name: bannerSlideFade;
+                            animation-timing-function: ease-in-out;
+                            animation-iteration-count: infinite;
+                            animation-duration: 12s;
+
+                            &.banner0 {
+                                animation-delay: 0s;
+                            }
+
+                            &.banner1 {
+                                animation-delay: 4s;
+                            }
+
+                            &.banner2 {
+                                animation-delay: 8s;
+                            }
+
+                            div {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 1em;
+
+                                h2 {
+                                    font-size: 1.8em;
+                                    font-weight: bold;
+                                    line-height: 1.5em;
+                                    padding: 0.25em 0.5em;
+                                    border-radius: 5px;
+                                    background-color: #e6d6ffb6;
+                                    color: black;
+
+                                    @include breakpoint('<=mobile') {
+                                        font-size: 1.75em;
+                                    }
+
+                                    @include breakpoint('<=thin') {
+                                        font-size: 1.25em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.presentations-banner {
+                    .banner0 {
+                        background-image: url(../images/banners/presentations0.jpg) !important;
+                        background-position: 50% 25%;
+
+                        h2 {
+                            margin-top: 4em;
+                        }
+
+                        @include breakpoint('<=thin') {
+                            h2 {
+                                margin-top: 10em;
+                            }
+                        }
+
+                    }
+
+                    .banner1 {
+                        background-image: url(../images/banners/presentations1.jpg) !important;
+                        background-position: 50% 15%;
+
+                        h2 {
+                            margin-top: 8em;
+                        }
+                    }
+
+                    .banner2 {
+                        background-image: url(../images/banners/presentations2.jpg) !important;
+                        background-position: 85% 50%;
+
+                        div {
+                            width: 40% !important;
+                        }
+
+                        @include breakpoint('<=thin') {
+                            background-position: 85% 100% !important;
+                            div {
+                                right: 1em;
+                                width: 50% !important;
+                            }
+                            h2 {
+                                margin-top: -7em;
+                            }
+                        }
                     }
                 }
             }
@@ -1401,7 +1521,7 @@ table {
             }
 
             .content {
-                padding-top: 4em !important;
+                padding-top: 4.5em !important;
             }
         }
 
@@ -1414,9 +1534,9 @@ table {
     }
 }
 
-@include breakpoint('<=mobile') {
-    .info-page-banner div {
-        width: 85% !important;
+@include breakpoint('<=narrower') {
+    .page-content {
+        padding-top: 1.5em;
     }
 }
 
@@ -2161,6 +2281,10 @@ table {
 
         .homepage #main {
             padding: 4em 0em 4em 0em;
+        }
+
+        .hide-mobile {
+            display: none;
         }
 
 }

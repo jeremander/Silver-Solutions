@@ -69,7 +69,7 @@ if __name__ == '__main__':
     dbx = dropbox.Dropbox(token)
 
     # download slides
-    if False:
+    if True:
         pres_names = [entry.name for entry in dbx.files_list_folder(DBX_SLIDES_DIR).entries]
         for pres_name in pres_names:
             dbx_path = f'{DBX_SLIDES_DIR}/{pres_name}'
