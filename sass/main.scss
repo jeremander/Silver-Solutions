@@ -2146,7 +2146,7 @@ table {
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: _misc(z-index-base) + 1;
+            z-index: _misc(z-index-base) + 4;
             background: none;
 
             .toggle {
@@ -2304,6 +2304,10 @@ table {
 
         .hide-mobile {
             display: none;
+        }
+
+        #titleBar {
+            width: 0em;
         }
 
 }
