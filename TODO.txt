@@ -1,4 +1,27 @@
-- nicer font for titles
-- swap samples & how we work
-- Test FF & Chrome
-- Logo
+Jeremy
+------
+- optimize for wider screens (Jonathan 1792 x 1120)
+- break items into bullets
+- change labels on slides
+- nicer font for banner
+- try left-justifying column text
+- (try inlining the JAD book)
+
+Denise
+------
+- More stock photos (more diversity)
+- Resume content
+- Improve bios
+
+
+Jonathan
+--------
+- Adobe stock
+- Play around with the logo
+- Two-tone for home banner (be careful about contrast with hands)
+- Icons
+- Fix typo in Slide 4
+- Fix up Silver Dental, SAT game theory?
+- Edit bio
+- Graphic design content
+- Try out illustration for the slide presentations banner
