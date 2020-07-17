@@ -9,7 +9,7 @@ $('.subpage-link').click(function() {
   const articles = $(this).closest('.info-page').find('article');
   $(articles.get(i))[0].scrollIntoView();
   const topbar = ($(window).width() <= 960) ? '.sidebar' : '#header';
-  const offset = $(topbar).outerHeight() + 12;
+  const offset = $(topbar).outerHeight() + 30;
   // compensate for nav bar height
   window.scrollBy(0, -offset);
 });

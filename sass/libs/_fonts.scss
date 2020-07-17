@@ -1,15 +1,12 @@
 @font-face {
-    font-family: BeVietnamBold;
-    src: url("../webfonts/be-vietnam/BeVietnam-Bold.ttf")  format("truetype");
+    font-family: BeVietnam;
+    font-weight: bold;
+    src: url("../webfonts/be-vietnam/BeVietnam-SemiBold.ttf") format("opentype");
 }
 
 @font-face {
-    font-family: Calistoga;
-    src: url("../webfonts/calistoga/Calistoga-Regular.ttf")  format("truetype");
-}
-
-@font-face {
-    font-family: GilroyExtraBold;
+    font-family: Gilroy;
+    font-weight: bold;
     src: url("../webfonts/gilroy/gilroy-extrabold-webfont.woff") format("woff");
 }
 
@@ -20,7 +17,47 @@
 }
 
 @font-face {
+    font-family: ITCAvantGarde;
+    font-style: normal;
+    src: url('../webfonts/itc-avant-garde-gothic/ITCAvantGardeStdDemi.woff') format('woff');
+}
+
+@font-face {
     font-family: Montserrat;
     font-weight: bold;
     src: url("../webfonts/montserrat/Montserrat-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MuseoSansRounded;
+    font-style: normal;
+    src: url('../webfonts/museo-sans-rounded/MuseoSansRounded500.woff') format('woff');
+}
+
+@font-face {
+    font-family: NuromBold;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../webfonts/nurom/Nurom-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Seravek Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Seravek Bold'), url('../webfonts/seravek/Seravek-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Seravek Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Seravek Medium'), url('../webfonts/seravek/Seravek-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Seravek';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Seravek'), url('../webfonts/seravek/Seravek.woff') format('woff');
 }

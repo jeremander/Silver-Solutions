@@ -1,18 +1,17 @@
 Jeremy
 ------
+- change 3rd banner pic
 - optimize for wider screens (Jonathan 1792 x 1120)
-- break items into bullets
-- change labels on slides
+- include Nike slide
 - nicer font for banner
-- try left-justifying column text
 - (try inlining the JAD book)
 
 Denise
 ------
 - More stock photos (more diversity)
+- Contact Tom Fishburne
 - Resume content
 - Improve bios
-
 
 Jonathan
 --------
@@ -25,3 +24,10 @@ Jonathan
 - Edit bio
 - Graphic design content
 - Try out illustration for the slide presentations banner
+
+
+
+Fonts
+-----
+Nurom
+ITC

@@ -17,6 +17,7 @@ License: pixelarity.com/license
 // Breakpoints.
 
 @include breakpoints((
+    wider:      ( 1681px,    null ),
     wide:       ( 1281px,  1680px ),
     normal:     ( 1081px,  1280px ),
     narrow:     ( 961px,   1080px ),
@@ -46,6 +47,7 @@ section, summary, time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-variant-ligatures: no-common-ligatures;
 }
 
 article, aside, details, figcaption, figure,
@@ -365,6 +367,7 @@ ol {
 
 ul.featured {
     text-align: center;
+    margin: 0;
     padding-left: 0;
     list-style: none;
 
@@ -380,7 +383,6 @@ ul.featured {
         }
 
         p {
-            // text-align: left;
 
             b {
                 color: map-get($palette, theme-medium);
@@ -951,7 +953,7 @@ table {
 #page-wrapper {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 4em auto 1fr;
+    grid-template-rows: 70px auto 1fr;
     background-color: map-get($palette, faint-gray);
 }
 
@@ -973,6 +975,8 @@ table {
         padding: 0 0.5em;
         font-size: 3.5em;
         font-family: Montserrat;
+        // font-family: "Seravek Medium";
+        // font-weight: bold;
         color: white;
         line-height: 1;
     }
@@ -998,8 +1002,11 @@ table {
 
 #main {
     position: relative;
-    padding: 1.5em 0em 1.5em 0em;
+    padding: 2em 0em 2em 0em;
     background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h3 {
         display: block;
@@ -1013,10 +1020,6 @@ table {
 
     .actions {
         padding-top: 1em;
-    }
-
-    .container {
-        margin-top: 1em;
     }
 
     li {
@@ -1065,7 +1068,7 @@ table {
 }
 
 .page-content {
-    padding: 2em 0em 1.5em 0em;
+    padding: 2em 0em 2em 0em;
     color: black;
 
     h1 {
@@ -1085,6 +1088,7 @@ table {
     }
 
     .section-header {
+        padding: 0em 0.5em;
         margin-bottom: 2em;
 
         h1 {
@@ -1098,7 +1102,7 @@ table {
     .info-page {
         padding: 0em;
         display: grid;
-        grid-template-columns: 11em 1fr;
+        grid-template-columns: minmax(11em, 14%) 1fr;
 
         .sidebar {
             background-color: map-get($palette, theme-pale);
@@ -1315,21 +1319,31 @@ table {
                     margin: 0;
                     grid-column-gap: 0em;
 
-                    h3 {
-                        margin-bottom: 0.5em;
-                        font-size: 1.2em;
-                    }
-
                     div {
-                        padding: 0em 0.5em 0em 0.5em;
+                        padding: 0em 0.75em 0em 0.5em;
                         border-right: 1px solid map-get($palette, light-gray);
 
                         &:last-child {
                             border-right: none;
                         }
 
-                        p {
-                            margin: 1em 0.5em 0em 0.5em;
+                        h3 {
+                            margin-bottom: 0.75em;
+                            font-size: 1.2em;
+                        }
+
+                        ul {
+                            text-align: left;
+                            list-style-type: none;
+                            padding: 0;
+
+                            li {
+                                margin: 0.75em 0em 0em 0em;
+                            }
+
+                            @include breakpoint('<=narrower') {
+                                text-align: center;
+                            }
                         }
                     }
                 }
@@ -1477,18 +1491,6 @@ table {
     }
 }
 
-@include breakpoint('<=narrow') {
-    .page-content {
-        padding-top: 3em;
-    }
-}
-
-@include breakpoint('<=narrower') {
-    .page-content {
-        padding-top: 2em;
-    }
-}
-
 /* Presentation slides */
 
 #pres-cartoon {
@@ -1507,26 +1509,26 @@ table {
 }
 
 .pres-samples {
+
     h2 {
-        margin: 1em 0em 1em 0em;
+        margin: 0em 0em 1.5em 0em;
     }
 
     .pres-sample {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
-        padding: 0em 1.5em 2em 1.5em;
+        padding: 1.5em;
         margin-bottom: 2em;
-        border-bottom: 1px solid map-get($palette, theme-medium);
+        background-color: map-get($palette, dark-gray);
+
+        @include breakpoint('<=narrower') {
+            grid-gap: 0.75em;
+            padding: 1em;
+        }
 
         &:last-child {
             border-bottom: 0px;
-        }
-
-        @include breakpoint('<=narrower') {
-            padding: 0em 0em 1.25em 0em;
-            margin-bottom: 1.25em;
-            grid-gap: 0.75em;
         }
 
         div {
@@ -1534,7 +1536,7 @@ table {
                 display: block;
                 width: 100%;
                 border: 1px solid map-get($palette, light-gray);
-                box-shadow: 1px 1px 3px map-get($palette, medium-gray);
+                box-shadow: 1px 1px 1px map-get($palette, medium-gray);
             }
         }
     }
@@ -1545,8 +1547,12 @@ table {
 
 #about-us {
 
-    h1 {
-        font-weight: bold;
+    header {
+        margin-bottom: 2em;
+
+        h1 {
+            font-weight: bold;
+        }
     }
 
     .two-column {
@@ -1604,9 +1610,12 @@ table {
 
 #contact {
     position: relative;
-    margin-top: 1em;
     padding: 0;
     text-align: center;
+
+    @include breakpoint('>=wide') {
+        margin-top: 4em;
+    }
 
     > .container {
         background-color: map-get($palette, theme-medium);
@@ -2168,11 +2177,6 @@ table {
         #header {
             padding: 0;
         }
-
-        // #title {
-        //     top: 0em;
-        //     margin: 1.15em 0 1.15em 0;
-        // }
 
         #nav {
             display: none;
