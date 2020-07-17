@@ -961,14 +961,11 @@ table {
 
 #home-banner {
     width: 101%;  // why this is necessary?
-    height: 450px;
-    background-position: 50% 12%;
     background-repeat: no-repeat;
     background-image: url(../images/banners/homepage.png);
+    background-position: 50% 12%;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20% 0% 20% 0%;
     text-align: center;
 
     h2 {
@@ -979,24 +976,17 @@ table {
         // font-weight: bold;
         color: white;
         line-height: 1;
-    }
-}
 
-@include breakpoint('<=mobile') {
-    #home-banner {
-        height: 350px;
+        @include breakpoint('<=narrower') {
+            font-size: 2.9em;
+        }
 
-        h2 {
-            font-size: 2.6em;
+        @include breakpoint('<=mobile') {
+            font-size: 2.5em;
         }
     }
 }
 
-@include breakpoint('<=thin') {
-    #home-banner {
-        height: 300px;
-    }
-}
 
 /* Main */
 
@@ -1159,12 +1149,19 @@ table {
 
             .info-page-banner {
                 position: relative;
-                height: 325px;
                 min-width: 100%;
                 text-align: center;
                 display: table;
                 margin: 0em 0em 2em 0em;
-                padding: 0;
+                padding: 12em 0em;
+
+                @include breakpoint('<=thin') {
+                    padding: 8em 0em;
+                }
+
+                @include breakpoint('>=wider') {
+                    padding: 16em 0em;
+                }
 
                 .inner {
                     display: table-cell;
@@ -1220,26 +1217,19 @@ table {
                                 position: absolute;
                                 width: 100%;
                                 height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                padding: 1em;
 
                                 h2 {
-                                    font-size: 1.8em;
+                                    position: absolute;
+                                    font-size: 2.5em;
                                     font-weight: bold;
                                     line-height: 1.5em;
-                                    padding: 0.25em 0.25em;
-                                    border-radius: 5px;
-                                    background-color: #e6d6ffb6;
-                                    color: black;
 
                                     @include breakpoint('<=mobile') {
-                                        font-size: 1.75em;
+                                        font-size: 2em;
                                     }
 
-                                    @include breakpoint('<=thin') {
-                                        font-size: 1.25em;
+                                    @include breakpoint('>=wider') {
+                                        font-size: 3em;
                                     }
                                 }
                             }
@@ -1250,62 +1240,86 @@ table {
                 &.presentations-banner {
                     .banner0 {
                         background-image: url(../images/banners/presentations0.jpg) !important;
-                        background-position: 34% 25%;
+                        background-position: 50% 4%;
 
 
                         h2 {
-                            margin-top: 4em;
-                        }
+                            top: 3%;
+                            left: 2%;
+                            width: 90%;
+                            color: black;
 
-                        @include breakpoint('<=thin') {
-                            div {
-                                left: 10%;
-                                width: 80% !important;
-
-                                h2 {
-                                    margin-top: 10em;
-                                }
+                            @include breakpoint('<=wide') {
+                                font-size: 2.3em !important;
+                            }
+                            @include breakpoint('<=mobile') {
+                                font-size: 1.6em !important;
+                            }
+                            @include breakpoint('<=thin') {
+                                font-size: 1.4em !important;
+                            }
+                            @include breakpoint('<=tiny') {
+                                top: 1%;
+                                left: 3%;
+                                width: 63%;
+                                font-size: 1.1em !important;
                             }
                         }
-
                     }
 
                     .banner1 {
                         background-image: url(../images/banners/presentations1.jpg) !important;
-                        background-position: 50% 15%;
+                        background-position: 50% 7%;
 
                         h2 {
-                            margin-top: 8em;
-                        }
+                            top: 24%;
+                            right: 1%;
+                            width: 40%;
+                            color: black;
 
-                        @include breakpoint('<=thin') {
-                            div {
-                                left: 10%;
-                                width: 80% !important;
-
-                                h2 {
-                                    margin-top: 10em;
-                                }
+                            @include breakpoint('>=wide') {
+                                width: 37%;
                             }
+                            @include breakpoint('<=narrower') {
+                                font-size: 2.2em !important;
+                                width: 35%;
+                            }
+                            @include breakpoint('<=mobile') {
+                                top: 22%;
+                                font-size: 1.6em !important;
+                            }
+                            @include breakpoint('<=thin') {
+                                font-size: 1.5em !important;
+                            }
+                            @include breakpoint('<=tiny') {
+                                top: 6%;
+                                width: 42%;
+                                font-size: 1.3em !important;
+                            }
+
                         }
                     }
 
                     .banner2 {
                         background-image: url(../images/banners/presentations2.jpg) !important;
-                        background-position: 85% 50%;
+                        background-position: 50% 39%;
 
-                        div {
-                            width: 40% !important;
-                        }
+                        h2 {
+                            top: 40%;
+                            right: 0.5em;
+                            width: 40%;
+                            color: white;
 
-                        @include breakpoint('<=tiny') {
-                            background-position: 90% 100% !important;
-                            div {
-                                right: 1em;
-                                width: 50% !important;
+                            @include breakpoint('<=thin') {
+                                font-size: 1.5em !important;
+                                right: 0.25em;
+                                top: 20%;
+                                width: 46%;
                             }
-                            h2 {
-                                margin-top: -7em;
+
+                            @include breakpoint('>=wider') {
+                                right: 0em;
+                                width: 60%;
                             }
                         }
                     }

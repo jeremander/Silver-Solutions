@@ -1,8 +1,5 @@
 Jeremy
 ------
-- change 3rd banner pic
-- optimize for wider screens (Jonathan 1792 x 1120)
-- include Nike slide
 - nicer font for banner
 - (try inlining the JAD book)
 
@@ -18,6 +15,7 @@ Jonathan
 - Adobe stock
 - Play around with the logo
 - Two-tone for home banner (be careful about contrast with hands)
+- Additional product design slides?
 - Icons
 - Fix typo in Slide 4
 - Fix up Silver Dental, SAT game theory?

@@ -20,6 +20,7 @@ SLIDE_CATEGORIES = {
     'Sales and Marketing Pitches' : ['WF43', 'WF'],
     'Training and Webinars' : ['the_business_of_medicine', 'holistic_dentistry'],
     'User Conferences' : ['alayacare_conference', 'patient_experience'],
+    'Product Design' : ['nike'],
     'Roasts, Toasts, and Celebrations' : ['new_year_invitation_2020', '50th_anniversary']
 }
 

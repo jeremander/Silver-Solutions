@@ -60,7 +60,10 @@ def ppt_to_jpg(path):
 def img_to_jpg(path):
     p = Path(path)
     if (p.suffix != '.jpg'):  # convert to jpg
-        run(['convert', p, (SLIDE_IMG_DIR / p.parent.stem / p.name).with_suffix('.jpg')])
+        img_dir = SLIDE_IMG_DIR / p.parent.stem
+        if (not img_dir.exists()):
+            img_dir.mkdir(parents = True)
+        run(['convert', p, (img_dir / p.name).with_suffix('.jpg')])
 
 
 if __name__ == '__main__':
