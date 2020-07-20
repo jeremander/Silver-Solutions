@@ -1240,7 +1240,7 @@ table {
                 &.presentations-banner {
                     .banner0 {
                         background-image: url(../images/banners/presentations0.jpg) !important;
-                        background-position: 50% 4%;
+                        background-position: 50% 8%;
 
 
                         h2 {
@@ -1286,17 +1286,14 @@ table {
                             }
                             @include breakpoint('<=mobile') {
                                 top: 22%;
+                                width: 9em;
                                 font-size: 1.6em !important;
-                            }
-                            @include breakpoint('<=thin') {
-                                font-size: 1.5em !important;
                             }
                             @include breakpoint('<=tiny') {
                                 top: 6%;
-                                width: 42%;
+                                width: 7em;
                                 font-size: 1.3em !important;
                             }
-
                         }
                     }
 
@@ -1305,21 +1302,15 @@ table {
                         background-position: 50% 39%;
 
                         h2 {
-                            top: 40%;
-                            right: 0.5em;
-                            width: 40%;
+                            top: 36%;
+                            right: 8%;
+                            width: 8em;
                             color: white;
 
                             @include breakpoint('<=thin') {
                                 font-size: 1.5em !important;
-                                right: 0.25em;
-                                top: 20%;
-                                width: 46%;
-                            }
-
-                            @include breakpoint('>=wider') {
-                                right: 0em;
-                                width: 60%;
+                                top: 28%;
+                                right: 2%;
                             }
                         }
                     }
