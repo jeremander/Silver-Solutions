@@ -1084,8 +1084,6 @@ table {
         h1 {
             font-size: 2em;
             font-weight: bold;
-            text-align: left;
-            padding-left: 0.75em;
         }
     }
 
@@ -1244,7 +1242,6 @@ table {
                         background-image: url(../images/banners/presentations0.jpg) !important;
                         background-position: 50% 8%;
 
-
                         h2 {
                             top: 3%;
                             left: 2%;
@@ -1317,6 +1314,79 @@ table {
                         }
                     }
                 }
+
+                &.resumes-banner {
+                    .banner0 {
+                        background-image: url(../images/banners/resumes0.jpg) !important;
+                        background-position: 50% 41%;
+
+                        h2 {
+                            top: 20%;
+                            left: 4%;
+                            width: 10em;
+                            color: white;
+
+                            @include breakpoint('<=mobile') {
+                                font-size: 1.6em !important;
+                            }
+                            @include breakpoint('<=thin') {
+                                font-size: 1.4em !important;
+                                top: 15%;
+                                width: 8em;
+                            }
+                        }
+                    }
+
+                    .banner1 {
+                        background-image: url(../images/banners/resumes1.jpg) !important;
+                        background-position: 50% 22%;
+
+                        @include breakpoint('<=thin') {
+                            background-position: 100% 22%;
+                        }
+
+                        h2 {
+                            top: 45%;
+                            left: 5%;
+                            width: 90%;
+                            color: black;
+
+                            @include breakpoint('<=thin') {
+                                font-size: 1.5em !important;
+                                top: 40%;
+                                left: 9%;
+                                width: 82%;
+                            }
+
+                            @include breakpoint('<=tiny') {
+                                left: 17%;
+                                width: 66%;
+                            }
+                        }
+                    }
+
+                    .banner2 {
+                        background-image: url(../images/banners/resumes2.jpg) !important;
+                        background-position: 0% 15%;
+
+                        h2 {
+                            font-size: 2em !important;
+                            top: 30%;
+                            left: 3%;
+                            width: 11em;
+
+                            @include breakpoint('<=mobile') {
+                                font-size: 1.6em !important;
+                                width: 8em;
+                            }
+                            @include breakpoint('<=tiny') {
+                                font-size: 1.3em !important;
+                            }
+                        }
+                    }
+                }
+
+
             }
 
             article {
