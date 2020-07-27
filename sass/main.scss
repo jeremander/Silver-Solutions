@@ -1196,10 +1196,10 @@ table {
                             background-repeat: no-repeat;
                             background-size: cover;
                             background-image: url(../images/banner.jpg);
-                            animation-name: bannerSlideFade;
-                            animation-timing-function: ease-in-out;
-                            animation-iteration-count: infinite;
-                            animation-duration: 13.5s;
+                            // animation-name: bannerSlideFade;
+                            // animation-timing-function: ease-in-out;
+                            // animation-iteration-count: infinite;
+                            // animation-duration: 13.5s;
 
                             &.banner0 {
                                 animation-delay: 0s;
@@ -1367,12 +1367,12 @@ table {
 
                     .banner2 {
                         background-image: url(../images/banners/resumes2.jpg) !important;
-                        background-position: 0% 15%;
+                        background-position: 80% 31%;
 
                         h2 {
                             font-size: 2em !important;
                             top: 30%;
-                            left: 3%;
+                            left: 12%;
                             width: 11em;
 
                             @include breakpoint('<=mobile') {
@@ -1381,6 +1381,7 @@ table {
                             }
                             @include breakpoint('<=tiny') {
                                 font-size: 1.3em !important;
+                                left: 3%;
                             }
                         }
                     }
@@ -1514,7 +1515,7 @@ table {
             }
 
             .content {
-                margin-top: 0em;
+                margin-top: -3em;
                 padding: 2em 0em 0em 0em;
 
                 article {
@@ -1561,7 +1562,8 @@ table {
             }
 
             .content {
-                padding-top: 4.5em !important;
+                margin-top: 1em;
+                padding-top: 2.5em !important;
             }
         }
 
