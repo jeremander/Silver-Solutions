@@ -125,7 +125,7 @@ body {
 }
 
 body, input, textarea, select {
-    font-family: 'Roboto', sans-serif;
+    font-family: map-get($font, main), sans-serif;
     font-size: 15pt;
     font-weight: 300;
     line-height: 1.75em;
@@ -133,6 +133,7 @@ body, input, textarea, select {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: map-get($font, header);
     font-weight: 300;
     color: #333131;
 
@@ -581,7 +582,7 @@ form {
             border: 0;
             padding: 0.70em 1em;
             font-size: 1em;
-            font-family: 'Roboto', sans-serif;
+            font-family: map-get($font, main), sans-serif;
             font-weight: 300;
             border-radius: 6px;
             background: map-get($palette, light-gray);
@@ -603,7 +604,7 @@ form {
         border: 0;
         padding: 0.70em 1em;
         font-size: 1em;
-        font-family: 'Roboto', sans-serif;
+        font-family: map-get($font, main), sans-serif;
         font-weight: 300;
         border-radius: 6px;
         background: map-get($palette, light-gray);
@@ -809,6 +810,7 @@ table {
                 align-items: center;
                 text-decoration: none;
                 letter-spacing: 1px;
+                font-family: map-get($font, logo-title);
                 font-size: 20px;
                 font-weight: 300;
                 color: #FFF;
@@ -870,6 +872,7 @@ table {
                     padding: 3px 18px;
                     letter-spacing: 1px;
                     text-decoration: none;
+                    font-family: map-get($font, navbar);
                     font-weight: 300;
                     font-size: 14px;
                     outline: 0;
@@ -971,8 +974,7 @@ table {
     h2 {
         padding: 0 0.5em;
         font-size: 3.5em;
-        font-family: Montserrat;
-        // font-family: "Seravek Medium";
+        font-family: map-get($font, banner);
         // font-weight: bold;
         color: white;
         line-height: 1;
@@ -1084,6 +1086,16 @@ table {
         h1 {
             font-size: 2em;
             font-weight: bold;
+        }
+    }
+
+    article:first-child .section-header {
+        background-color: map-get($palette, theme-medium);
+        margin: -2em 0em 0em 0em;
+        padding: 2em 0.5em 2em 0.5em;
+
+        h1 {
+            color: white;
         }
     }
 
@@ -1220,6 +1232,7 @@ table {
 
                                 h2 {
                                     position: absolute;
+                                    font-family: map-get($font, banner);
                                     font-size: 2.5em;
                                     font-weight: bold;
                                     line-height: 1.5em;
@@ -1318,13 +1331,21 @@ table {
                 &.resumes-banner {
                     .banner0 {
                         background-image: url(../images/banners/resumes0.jpg) !important;
-                        background-position: 50% 41%;
+                        // background-position: 50% 41%;
+                        // background-position: 0% 50%;
+                        background-position: 0% 40%;
 
                         h2 {
-                            top: 20%;
-                            left: 4%;
-                            width: 10em;
-                            color: white;
+                            // top: 30%;
+                            // right: 10%;
+                            // top: 20%;
+                            // left: 4%;
+                            top: 5%;
+                            left: 5%;
+                            // width: 10em;
+                            width: 90%;
+                            // color: white;
+                            color: black;
 
                             @include breakpoint('<=mobile') {
                                 font-size: 1.6em !important;
@@ -1370,13 +1391,11 @@ table {
                         background-position: 80% 31%;
 
                         h2 {
-                            font-size: 2em !important;
                             top: 30%;
-                            left: 12%;
+                            left: 6%;
                             width: 11em;
 
                             @include breakpoint('<=mobile') {
-                                font-size: 1.6em !important;
                                 width: 8em;
                             }
                             @include breakpoint('<=tiny') {
