@@ -1196,10 +1196,10 @@ table {
                             background-repeat: no-repeat;
                             background-size: cover;
                             background-image: url(../images/banner.jpg);
-                            // animation-name: bannerSlideFade;
-                            // animation-timing-function: ease-in-out;
-                            // animation-iteration-count: infinite;
-                            // animation-duration: 13.5s;
+                            animation-name: bannerSlideFade;
+                            animation-timing-function: ease-in-out;
+                            animation-iteration-count: infinite;
+                            animation-duration: 13.5s;
 
                             &.banner0 {
                                 animation-delay: 0s;
