@@ -389,6 +389,7 @@ ul.featured {
                 color: map-get($palette, theme-medium);
             }
         }
+
     }
 }
 
@@ -709,64 +710,21 @@ table {
     }
 }
 
-/* FA Icons */
+/* Icons */
 
-.pennant {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 1em;
-    padding: 0.40em;
-    border-radius: 50%;
-    border: 1px solid #787777;
-    cursor: pointer;
-    box-shadow: 1px 1px 2px 1px map-get($palette, light-gray);
+.badge {
 
-    &:hover {
-        transform: translate(3px, 3px);
-        box-shadow: 0px 0px 5px 1px map-get($palette, theme-medium);
+    .home-badge {
+        width: 6em;
+        height: 6em;
+        border-radius: 50%;
+        box-shadow: 1px 1px 3px 1px map-get($palette, medium-gray);
 
-        .icon {
-            background-color: white;
+        &:hover {
+            transform: translate(3px, 3px);
         }
     }
 
-}
-
-.icon {
-    position: relative;
-    display: inline-block;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    border: 1px solid #787777;
-    line-height: 3em;
-    font-size: 1.8em;
-    color: map-get($palette, theme-medium);
-    text-decoration: none;
-
-    &.solid {
-        &:before {
-            font-weight: 900;
-        }
-    }
-
-    &.brands {
-        &:before {
-            font-family: 'Font Awesome 5 Brands';
-        }
-    }
-
-    &:before {
-        display: inline-block;
-        font-family: 'Font Awesome 5 Free';
-        font-size: 1.25em;
-        text-decoration: none;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
 }
 
 /* Header */
@@ -1004,10 +962,6 @@ table {
         display: block;
         padding: 1em 0em 1em 0em;
         font-size: 1.1em;
-    }
-
-    .pennant, .icon {
-        border-color: #c9c9c9;
     }
 
     .actions {
@@ -1333,27 +1287,28 @@ table {
                         background-image: url(../images/banners/resumes0.jpg) !important;
                         // background-position: 50% 41%;
                         // background-position: 0% 50%;
-                        background-position: 0% 40%;
+                        background-position: 50% 40%;
 
                         h2 {
-                            // top: 30%;
-                            // right: 10%;
+                            top: 33%;
+                            right: 10%;
                             // top: 20%;
                             // left: 4%;
-                            top: 5%;
-                            left: 5%;
-                            // width: 10em;
-                            width: 90%;
-                            // color: white;
-                            color: black;
+                            // top: 5%;
+                            // left: 5%;
+                            width: 11em;
+                            // width: 90%;
+                            color: white;
+                            // color: black;
 
                             @include breakpoint('<=mobile') {
                                 font-size: 1.6em !important;
                             }
                             @include breakpoint('<=thin') {
                                 font-size: 1.4em !important;
-                                top: 15%;
-                                width: 8em;
+                                right: 5%;
+                                // top: 15%;
+                                // width: 8em;
                             }
                         }
                     }
@@ -1370,7 +1325,7 @@ table {
                             top: 45%;
                             left: 5%;
                             width: 90%;
-                            color: black;
+                            color: white;
 
                             @include breakpoint('<=thin') {
                                 font-size: 1.5em !important;
@@ -2129,12 +2084,6 @@ table {
                 width: 100% !important;
                 padding: 0.70em 1em !important;
             }
-        }
-
-    /* Icons */
-
-        .pennant {
-            margin-bottom: 0em;
         }
 
     /* Nav Panel */

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 from datetime import datetime
 from pathlib import Path
 import shlex
@@ -68,11 +69,15 @@ def img_to_jpg(path):
 
 if __name__ == '__main__':
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-s', '--slides', action = 'store_true', help = 'download slides')
+    args = parser.parse_args()
+
     token = get_dropbox_token()
     dbx = dropbox.Dropbox(token)
 
     # download slides
-    if True:
+    if args.slides:
         pres_names = [entry.name for entry in dbx.files_list_folder(DBX_SLIDES_DIR).entries]
         for pres_name in pres_names:
             dbx_path = f'{DBX_SLIDES_DIR}/{pres_name}'
@@ -89,7 +94,7 @@ if __name__ == '__main__':
                         img_to_jpg(dest_path)
 
     # download images
-    subdirs = ['banners']
+    subdirs = ['banners', 'icons']
     for subdir in subdirs:
         dbx_subdir = f'{DBX_IMG_DIR}/{subdir}'
         img_names = [entry.name for entry in dbx.files_list_folder(dbx_subdir).entries]
