@@ -89,4 +89,3 @@ $("#contact form").submit(function(e) {
 $(document).ready(function() {
   highlightCurrentPageSection();
 });
-
