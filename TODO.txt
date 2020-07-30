@@ -1,7 +1,6 @@
 Jeremy
 ------
-- nicer font for banner
-- (try inlining the JAD book)
+- Our services click issue
 
 Denise
 ------
@@ -12,19 +11,12 @@ Denise
 
 Jonathan
 --------
-- Adobe stock
-- Play around with the logo
-- Two-tone for home banner (be careful about contrast with hands)
-- Additional product design slides?
-- Icons
-- Fix typo in Slide 4
-- Fix up Silver Dental, SAT game theory?
-- Edit bio
-- Graphic design content
-- Try out illustration for the slide presentations banner
-
-
-Fonts
------
-Nurom
-ITC
+- Upload slide to Dropbox with "equiptment" typo fixed
+- Add padding to homepage icons, tweak the fountain pen icon
+- New icons for How We Work With You (presentations & resumes page)
+- Additional set of slides for product design
+- Fix up Silver Dental background and any other slides that can use improvement
+- Choose image to put in the bottom of your bio
+- Update your bio to the way you want it to be (we can help edit)
+- Content for graphic design section
+- After we purchase banner images, edit & recolor accordingly.
