@@ -1379,27 +1379,22 @@ table {
                         padding: 0em 0.75em 0em 0.5em;
                         border-right: 1px solid map-get($palette, light-gray);
 
+                        @include breakpoint('<=narrower') {
+                            padding: 0em;
+                            margin: auto;
+                            width: 65%;
+                        }
+
+                        @include breakpoint('<=mobile') {
+                            width: 80%;
+                        }
+
                         &:last-child {
                             border-right: none;
                         }
 
-                        h3 {
-                            margin-bottom: 0.75em;
-                            font-size: 1.2em;
-                        }
-
-                        ul {
-                            text-align: left;
-                            list-style-type: none;
-                            padding: 0;
-
-                            li {
-                                margin: 0.75em 0em 0em 0em;
-                            }
-
-                            @include breakpoint('<=narrower') {
-                                text-align: center;
-                            }
+                        p {
+                            margin: 0.5em 0em 1.5em 0em;
                         }
                     }
                 }
@@ -1524,10 +1519,6 @@ table {
                     .grid-container {
                         div {
                             border: none;
-
-                            p {
-                                margin-bottom: 1.5em;
-                            }
                         }
                     }
                 }
