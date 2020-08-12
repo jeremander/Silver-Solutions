@@ -750,8 +750,8 @@ table {
 
 #title-box {
     position: absolute;
+    top: 5px;
     left: 18px;
-    top: 6px;
 
     #title-grid {
         display: inline-grid;
@@ -761,10 +761,11 @@ table {
 
         #logo {
             width: 59px;
+            display: flex;
+            align-items: center;
         }
 
         #title {
-            height: 25px;
 
             a {
                 height: 100%;
@@ -927,7 +928,7 @@ table {
 #home-banner {
     width: 101%;  // why this is necessary?
     background-repeat: no-repeat;
-    background-image: url(../images/banners/homepage.png);
+    background-image: url(../images/banners/homepage.jpg);
     background-position: 50% 12%;
     background-size: cover;
     padding: 20% 0% 20% 0%;
@@ -1143,15 +1144,33 @@ table {
                             0%, 100% {
                                 opacity: 1;
                             }
-                            25% {
+                            23% {
                                 opacity: 1;
                             }
-                            33% {
+                            31% {
                                 opacity: 0;
                             }
-                            67% {
+                            // 67% {
+                            //     opacity: 0;
+                            // }
+                            92% {
                                 opacity: 0;
                             }
+                        }
+
+                        @keyframes bannerSlideFadeLong {
+                            0%, 100% {
+                                opacity: 1;
+                            }
+                            30% {
+                                opacity: 1;
+                            }
+                            38% {
+                                opacity: 0;
+                            }
+                            // 67% {
+                            //     opacity: 0;
+                            // }
                             92% {
                                 opacity: 0;
                             }
@@ -1169,7 +1188,7 @@ table {
                             animation-name: bannerSlideFade;
                             animation-timing-function: ease-in-out;
                             animation-iteration-count: infinite;
-                            animation-duration: 13.5s;
+                            animation-duration: 14.5s;
 
                             &.banner0 {
                                 animation-delay: 0s;
@@ -1181,6 +1200,7 @@ table {
 
                             &.banner2 {
                                 animation-delay: 9s;
+                                animation-name: bannerSlideFadeLong;
                             }
 
                             div {
@@ -1214,8 +1234,8 @@ table {
                         background-position: 50% 8%;
 
                         h2 {
-                            top: 3%;
-                            left: 2%;
+                            top: 1%;
+                            left: 5%;
                             width: 90%;
                             color: black;
 
@@ -1229,7 +1249,6 @@ table {
                                 font-size: 1.4em !important;
                             }
                             @include breakpoint('<=tiny') {
-                                top: 1%;
                                 left: 3%;
                                 width: 63%;
                                 font-size: 1.1em !important;

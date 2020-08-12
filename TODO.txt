@@ -1,22 +1,38 @@
 Jeremy
 ------
+- Implement slide carousel for slide presentations info
 - Our services click issue
 
 Denise
 ------
-- More stock photos (more diversity)
-- Contact Tom Fishburne
-- Resume content
+- Ask Bayada for permission
 - Improve bios
+- Resume content
+
 
 Jonathan
 --------
-- Upload slide to Dropbox with "equiptment" typo fixed
-- Add padding to homepage icons, tweak the fountain pen icon
-- New icons for How We Work With You (presentations & resumes page)
+- Banner images: edit & recolor
+- Icons
+    - Homepage graphic design icon: try making the lines a tiny bit thinner
+    - Slide presentations
+        - Strategize: Tweak the pawn (tiny bit bigger, a pixel or two down & to the left)
+    - Resumes
+        Getting to Know You: Change to "Meet & Greet"
+        Create Resume: needs a bottom, maybe a dog-eared bottom-right corner with lines for words
+- Slides
+    - SAT Game Theory
+        - Change background (too busy)
+        - Slide titles should be vertically centered in boxes
+    - Silver Dental
+        - Change the logo (feel free to shorten the toothbrush)
+        - Make sure formatting & content looks correct
+    - Business of Medicine
+        - Remove titles
+        - Trillions of dollars on its own line, move footnote underneath
+        - GOP -> GDP
+        - Graph: put trillions on y-axis
 - Additional set of slides for product design
-- Fix up Silver Dental background and any other slides that can use improvement
 - Choose image to put in the bottom of your bio
 - Update your bio to the way you want it to be (we can help edit)
 - Content for graphic design section
-- After we purchase banner images, edit & recolor accordingly.
