@@ -1191,12 +1191,20 @@ table {
                             &.banner1 {
                                 animation-delay: 4.5s;
                                 visibility: hidden;
+
+                                div {
+                                    visibility: hidden;
+                                }
                             }
 
                             &.banner2 {
                                 animation-delay: 9s;
                                 animation-name: bannerSlideFadeLong;
                                 visibility: hidden;
+
+                                div {
+                                    visibility: hidden;
+                                }
                             }
 
                             div {
