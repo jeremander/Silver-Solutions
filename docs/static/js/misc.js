@@ -88,4 +88,16 @@ $("#contact form").submit(function(e) {
 
 $(document).ready(function() {
   highlightCurrentPageSection();
+
+  // delay loading the second & third banner images
+
+  $('.banner1').delay(3000).queue(function(next) {
+    $(this).css('visibility', 'visible')
+    next();
+  });
+
+  $('.banner2').delay(7500).queue(function (next) {
+    $(this).css('visibility', 'visible');
+    next();
+  });
 });
