@@ -4,6 +4,7 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 import shlex
+import shutil
 import subprocess
 
 import dropbox
@@ -60,10 +61,12 @@ def ppt_to_jpg(path):
 
 def img_to_jpg(path):
     p = Path(path)
-    if (p.suffix != '.jpg'):  # convert to jpg
-        img_dir = SLIDE_IMG_DIR / p.parent.stem
-        if (not img_dir.exists()):
-            img_dir.mkdir(parents = True)
+    img_dir = SLIDE_IMG_DIR / p.parent.stem
+    if (not img_dir.exists()):
+        img_dir.mkdir(parents = True)
+    if (p.suffix == '.jpg'):  # just move to dest
+        shutil.copy(p, img_dir / p.name)
+    else:  # convert to jpg
         run(['convert', p, (img_dir / p.name).with_suffix('.jpg')])
 
 
