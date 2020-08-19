@@ -5,7 +5,6 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100');
 @import 'fontawesome-all.min.css';
 
 /*
@@ -133,7 +132,7 @@ body, input, textarea, select {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: map-get($font, header);
+    font-family: map-get($font, header), sans-serif;
     font-weight: 300;
     color: #333131;
 
@@ -773,7 +772,7 @@ table {
                 align-items: center;
                 text-decoration: none;
                 letter-spacing: 1px;
-                font-family: map-get($font, logo-title);
+                font-family: map-get($font, logo-title), sans-serif;
                 font-size: 20px;
                 font-weight: 300;
                 color: #FFF;
@@ -835,7 +834,7 @@ table {
                     padding: 3px 18px;
                     letter-spacing: 1px;
                     text-decoration: none;
-                    font-family: map-get($font, navbar);
+                    font-family: map-get($font, navbar), sans-serif;
                     font-weight: 300;
                     font-size: 14px;
                     outline: 0;
@@ -937,7 +936,7 @@ table {
     h2 {
         padding: 0 0.5em;
         font-size: 3.5em;
-        font-family: map-get($font, banner);
+        font-family: map-get($font, banner), sans-serif;
         // font-weight: bold;
         color: white;
         line-height: 1;
@@ -1218,7 +1217,7 @@ table {
 
                                 h2 {
                                     position: absolute;
-                                    font-family: map-get($font, banner);
+                                    font-family: map-get($font, banner), sans-serif;
                                     font-size: 2.5em;
                                     font-weight: bold;
                                     line-height: 1.5em;

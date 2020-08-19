@@ -1,6 +1,8 @@
 Jeremy
 ------
-- Implement slide carousel for slide presentations info
+- Testimonials
+- Resume samples
+- GIF animation
 - Our services click issue
 
 Denise
@@ -12,26 +14,13 @@ Denise
 
 Jonathan
 --------
-- Banner images: edit & recolor
 - Icons
-    - Homepage graphic design icon: try making the lines a tiny bit thinner
-    - Slide presentations
-        - Strategize: Tweak the pawn (tiny bit bigger, a pixel or two down & to the left)
-    - Resumes
-        Getting to Know You: Change to "Meet & Greet"
-        Create Resume: needs a bottom, maybe a dog-eared bottom-right corner with lines for words
+    - Maybe have numbers on the corners of them?
 - Slides
     - SAT Game Theory
         - Change background (too busy)
-        - Slide titles should be vertically centered in boxes
     - Silver Dental
-        - Change the logo (feel free to shorten the toothbrush)
-        - Make sure formatting & content looks correct
-    - Business of Medicine
-        - Remove titles
-        - Trillions of dollars on its own line, move footnote underneath
-        - GOP -> GDP
-        - Graph: put trillions on y-axis
+        - Fix title & reupload
 - Additional set of slides for product design
 - Choose image to put in the bottom of your bio
 - Update your bio to the way you want it to be (we can help edit)

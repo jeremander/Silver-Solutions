@@ -1,45 +1,4 @@
-@font-face {
-    font-family: BeVietnam;
-    font-weight: bold;
-    src: url("../webfonts/be-vietnam/BeVietnam-SemiBold.ttf") format("opentype");
-}
 
-@font-face {
-    font-family: Gilroy;
-    font-weight: bold;
-    src: url("../webfonts/gilroy/gilroy-extrabold-webfont.woff") format("woff");
-}
-
-@font-face {
-    font-family: GlacialIndifference;
-    font-weight: bold;
-    src: url("../webfonts/glacial-indifference/GlacialIndifference-Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: ITCAvantGarde;
-    font-style: normal;
-    src: url('../webfonts/itc-avant-garde-gothic/ITCAvantGardeStdDemi.woff') format('woff');
-}
-
-@font-face {
-    font-family: Montserrat;
-    font-weight: bold;
-    src: url("../webfonts/montserrat/Montserrat-SemiBold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: MuseoSansRounded;
-    font-style: normal;
-    src: url('../webfonts/museo-sans-rounded/MuseoSansRounded500.woff') format('woff');
-}
-
-@font-face {
-    font-family: NuromBold;
-    font-style: normal;
-    font-weight: bold;
-    src: url('../webfonts/nurom/Nurom-Bold.woff') format('woff');
-}
 
 @font-face {
     font-family: Raleway;
@@ -48,22 +7,9 @@
 }
 
 @font-face {
-    font-family: 'Seravek Bold';
+    font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    src: local('Seravek Bold'), url('../webfonts/seravek/Seravek-Bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Seravek Medium';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Seravek Medium'), url('../webfonts/seravek/Seravek-Medium.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Seravek';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Seravek'), url('../webfonts/seravek/Seravek.woff') format('woff');
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url("../webfonts/roboto/roboto.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
