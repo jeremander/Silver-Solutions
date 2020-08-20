@@ -1561,7 +1561,6 @@ table {
                     position: relative;
                     margin: 0.5em auto 0em auto;
                     padding: 0;
-                    width: 20em;
 
                     li {
                         display: block;
@@ -1633,6 +1632,21 @@ table {
 }
 
 /* Resumes */
+
+.page-content.resumes {
+    // tweak secondary navbar since there are more sections
+    @include breakpoint("<=thin") {
+        article:first-child .section-header {
+            margin-top: 0em;
+        }
+
+        .sidebar {
+            height: 8.75em;
+        }
+    }
+}
+
+
 
 .testimonials {
     display: grid;
