@@ -1322,14 +1322,8 @@ table {
                         h2 {
                             top: 33%;
                             right: 10%;
-                            // top: 20%;
-                            // left: 4%;
-                            // top: 5%;
-                            // left: 5%;
                             width: 11em;
-                            // width: 90%;
                             color: white;
-                            // color: black;
 
                             @include breakpoint('<=mobile') {
                                 font-size: 1.6em !important;
@@ -1337,8 +1331,6 @@ table {
                             @include breakpoint('<=thin') {
                                 font-size: 1.4em !important;
                                 right: 5%;
-                                // top: 15%;
-                                // width: 8em;
                             }
                         }
                     }
@@ -1589,7 +1581,7 @@ table {
     }
 }
 
-/* Presentation slides */
+/* Presentations */
 
 #pres-cartoon {
     margin: 2em 0em 1em 0em;
@@ -1637,6 +1629,46 @@ table {
                 box-shadow: 1px 1px 1px map-get($palette, medium-gray);
             }
         }
+    }
+}
+
+/* Resumes */
+
+.testimonials {
+    display: grid;
+    height: 100%;
+    margin: 0em 2em 2.5em 2em !important;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0em;
+    grid-column-gap: 2em;
+
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 2px solid map-get($palette, theme-medium);
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px map-get($palette, medium-gray);
+
+        div {
+            margin: 0.75em 0.75em;
+
+            &.testimonial-author {
+                text-align: center;
+            }
+        }
+    }
+
+    @include breakpoint('<=mobile') {
+        grid-template-columns: 1fr;
+
+        .testimonial {
+            margin-bottom: 2em;
+        }
+    }
+
+    @include breakpoint('<=tiny') {
+        margin: 0em 0.5em !important;
     }
 }
 

@@ -11,16 +11,10 @@ Denise
 - Improve bios
 - Resume content
 
-
 Jonathan
 --------
 - Icons
     - Maybe have numbers on the corners of them?
-- Slides
-    - SAT Game Theory
-        - Change background (too busy)
-    - Silver Dental
-        - Fix title & reupload
 - Additional set of slides for product design
 - Choose image to put in the bottom of your bio
 - Update your bio to the way you want it to be (we can help edit)
