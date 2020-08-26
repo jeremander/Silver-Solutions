@@ -1644,47 +1644,81 @@ table {
             height: 8.75em;
         }
     }
-}
 
+    .sample-resumes {
+        margin: 0em 2em 0em 2em !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
 
+        .sample-link {
+            text-align: center;
+            font-size: 1.25em;
+            margin-bottom: 1em;
+        }
 
-.testimonials {
-    display: grid;
-    height: 100%;
-    margin: 0em 2em 2.5em 2em !important;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 0em;
-    grid-column-gap: 2em;
+        .sample-pdf {
+            height: 100%;
+            width: 100%;
 
-    .testimonial {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border: 2px solid map-get($palette, theme-medium);
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px map-get($palette, medium-gray);
+            img {
+                object-fit: contain;
+            }
+        }
 
-        div {
-            margin: 0.75em 0.75em;
+        @include breakpoint('<=mobile') {
+            grid-template-columns: 1fr;
 
-            &.testimonial-author {
-                text-align: center;
+            .sample-resume .sample-pdf {
+                margin-bottom: 0.75em;
             }
         }
     }
 
-    @include breakpoint('<=mobile') {
-        grid-template-columns: 1fr;
+    .testimonials {
+        display: grid;
+        height: 100%;
+        margin: 0em 2em 2.5em 2em !important;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 0em;
+        grid-column-gap: 2em;
 
         .testimonial {
-            margin-bottom: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid map-get($palette, theme-medium);
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px map-get($palette, medium-gray);
+
+            div {
+                margin: 0.75em 0.75em;
+
+                &.testimonial-author {
+                    text-align: center;
+                }
+            }
+        }
+
+        @include breakpoint('<=mobile') {
+            grid-template-columns: 1fr;
+
+            .testimonial {
+                margin-bottom: 2em;
+            }
+        }
+
+        @include breakpoint('<=tiny') {
+            margin: 0em 0.5em !important;
         }
     }
-
-    @include breakpoint('<=tiny') {
-        margin: 0em 0.5em !important;
-    }
 }
+
+
+
+
+
+
 
 
 /* About Us */
