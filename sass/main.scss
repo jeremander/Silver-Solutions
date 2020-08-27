@@ -1690,6 +1690,7 @@ table {
             border: 2px solid map-get($palette, theme-medium);
             border-radius: 10px;
             box-shadow: 2px 2px 4px map-get($palette, medium-gray);
+            background-color: map-get($palette, theme-pale);
 
             div {
                 margin: 0.75em 0.75em;
@@ -1709,7 +1710,7 @@ table {
         }
 
         @include breakpoint('<=tiny') {
-            margin: 0em 0.5em !important;
+            margin: 0em 1em !important;
         }
     }
 }
