@@ -1684,24 +1684,53 @@ table {
         grid-column-gap: 2em;
 
         .testimonial {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+
             border: 2px solid map-get($palette, theme-medium);
             border-radius: 10px;
             box-shadow: 2px 2px 4px map-get($palette, medium-gray);
             background-color: map-get($palette, theme-pale);
 
-            div {
-                margin: 0.75em 0.75em;
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: 3em 1fr;
+                grid-column-gap: 1.1em;
+                height: 100%;
 
-                &.testimonial-author {
-                    text-align: center;
+                > div {
+                    margin: 0.75em 0.75em 0.75em 0.25em;
+                }
+
+                .giant-quote {
+                    display: flex;
+                    flex-direction: column;
+
+                    div {
+                        font-family: Helvetica;
+                        font-size: 7em;
+                        font-weight: bold;
+                        color: map-get($palette, dark-gray);
+                        padding: 0.33em 0.25em 0em 0em;
+                        cursor: default;
+                        -moz-user-select: -moz-none;
+                        -khtml-user-select: none;
+                        -webkit-user-select: none;
+                    }
+                }
+
+                .testimonial-flex {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .testimonial-author {
+                        margin-top: 0.75em;
+                        text-align: center;
+                    }
                 }
             }
         }
 
-        @include breakpoint('<=mobile') {
+        @include breakpoint('<=narrower') {
             grid-template-columns: 1fr;
 
             .testimonial {
