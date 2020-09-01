@@ -2,6 +2,13 @@
 
 {% set page_name = 'our services' %}
 
+{% block head_scripts %}
+  <script>
+    var img = new Image();
+    img.src = "{{IMAGE}}/banners/presentations0.jpg";
+  </script>
+{% endblock head_scripts %}
+
 {% block content %}
 
 <div class="page-content">
@@ -62,11 +69,15 @@
           </div>
         </div>
 
-        <div id="pres-cartoon" class="picture-box">
-          <img src="{{IMAGE}}/pres_cartoon.png"/>
+        <div id="pres-animation">
+          <img src="{{IMAGE}}/pres_animation.gif">
         </div>
 
-        <div id="callout">
+        <!-- <div id="pres-cartoon" class="picture-box">
+          <img src="{{IMAGE}}/pres_cartoon.png"/>
+        </div> -->
+
+        <!-- <div id="callout">
           <table>
             <tr>
               <th colspan="2">
@@ -96,7 +107,7 @@
               </td>
             </tr>
           </table>
-        </div>
+        </div> -->
 
       </article>
 
@@ -162,6 +173,7 @@
 
 
 {% block scripts %}
+
 <script>
   $('#header').addClass('hide-mobile');
   setupPageSectionObserver();
