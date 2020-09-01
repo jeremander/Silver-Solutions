@@ -1594,7 +1594,7 @@ table {
         width: 85%;
 
         @include breakpoint('<=thin') {
-            width: 95%;
+            width: 100%;
         }
     }
 }
