@@ -1436,63 +1436,8 @@ table {
                     }
                 }
 
-
             }
 
-            // #callout {
-            //     table {
-            //         margin-bottom: 3em;
-
-            //         tr {
-            //             border-top: 2px solid white;
-            //             color: white;
-            //             background-color: map-get($palette, theme-medium);
-
-            //             &:first-child {
-            //                 border-top: none;
-
-            //                 th {
-            //                     padding: 0.5em;
-            //                     text-align: center;
-            //                     border-radius: 5px 5px 0px 0px;
-            //                 }
-            //             }
-
-            //             &:last-child {
-            //                 td:first-child {
-            //                     border-radius: 0px 0px 0px 5px;
-            //                 }
-
-            //                 td:last-child {
-            //                     border-radius: 0px 0px 5px 0px;
-            //                 }
-            //             }
-
-            //             td {
-
-            //                 vertical-align: middle;
-            //                 padding: 0.5em 1em 0.5em 1em;
-
-            //                 &:first-child {
-            //                     width: 22%;
-            //                     text-align: center;
-            //                     font-weight: bold;
-            //                     font-size: 1.25em;
-            //                     border-right: 2px solid white;
-            //                     padding: 0.5em;
-            //                 }
-
-            //                 p {
-            //                     margin: 0.5em 0em 0.5em 0em;
-            //                 }
-
-            //                 .big {
-            //                     font-size: 1.25em;
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
         }
 
         @include breakpoint('<=narrower') {
@@ -1599,21 +1544,6 @@ table {
     }
 }
 
-// #pres-cartoon {
-//     margin: 2em 0em 1em 0em;
-//     img {
-//         width: 55%;
-//         border-radius: 4px;
-//         box-shadow: 0px 0px 2px 1px map-get($palette, light-gray);
-//     }
-// }
-
-// @include breakpoint('<=mobile') {
-//     #pres-cartoon img {
-//         width: 75%;
-//     }
-// }
-
 .pres-samples {
 
     h2 {
@@ -1624,13 +1554,13 @@ table {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
-        padding: 1.5em;
+        padding: 1em;
         margin-bottom: 2em;
         background-color: map-get($palette, dark-gray);
 
         @include breakpoint('<=narrower') {
             grid-gap: 0.75em;
-            padding: 1em;
+            padding: 0.75em;
         }
 
         &:last-child {
@@ -1760,13 +1690,6 @@ table {
         }
     }
 }
-
-
-
-
-
-
-
 
 /* About Us */
 
