@@ -90,66 +90,68 @@ squares = [ufl, uf, ufr, ul, uc, ur, ubl, ub, ubr, fdl, fd, fdr, fl, fc, fr, ful
 silver = '#c0c0cf'
 black = '#000000'
 white = '#ffffff'
+border_gray = '#777777'
 
 square_colors = {sq : black for sq in squares}
 square_colors.update({sq : silver for sq in [fdl, fd, fc, fu, fur, rdf, rd, rc, ru, rub]})
 
-def line_is_visible(pt1, pt2):
-    good = False
-    good |= u_face(pt1) and u_face(pt2)
-    good |= f_face(pt1) and f_face(pt2)
-    good |= r_face(pt1) and r_face(pt2)
-    good |= (u_face(pt1) and f_face(pt2)) or (f_face(pt1) and u_face(pt2))
-    good |= (u_face(pt1) and r_face(pt2)) or (r_face(pt1) and u_face(pt2))
-    return good
+square_factor = 0.86
 
-def extend_line(pt1, pt2, c = 1.0):
-    pt1 = np.array(pt1)
-    pt2 = np.array(pt2)
-    v = pt2 - pt1
-    return (pt1 + ((c + 1) / 2) * v, pt1 - (c - 1) * v / 2)
+plane_factor = 1.04
+delta = 3 * (plane_factor - 1)
 
-c = 1.0
+u_plane = [(-3 - delta, 3, -3), (-3 - delta, 3, 3 + delta), (3, 3, 3 + delta), (3, 3, -3)]
+f_plane = [(-3 - delta, -3 - delta, -3), (-3 - delta, 3, -3), (3, 3, -3), (3, -3 - delta, -3)]
+r_plane = [(3, -3 - delta, -3), (3, 3, -3), (3, 3, 3 + delta), (3, -3 - delta, 3 + delta)]
 
-lines = [extend_line(*pair, c = c) for pair in itertools.combinations(cube_grid, 2) if (sum((i1 == i2) for (i1, i2) in zip(*pair)) == 2) and line_is_visible(*pair)]
+def centroid(points):
+    arr = np.array(points)
+    return arr.sum(axis = 0) / len(points)
 
-def is_top_point(pt):
-    return (pt[1] == 3) and (pt[2] != -3) and (pt[0] != 3)
+def scale(pt, anchor, factor = 1.0):
+    anchor = np.array(anchor)
+    v = np.array(pt) - anchor
+    return anchor + factor * v
 
-line_width = 0.22
-top_line_width_scale = 0.75
+def scale_polygon(points, factor = 1.0):
+    center = centroid(points)
+    return [scale(pt, center, factor = factor) for pt in points]
 
-# def is_outer_
+yshift = np.array([0, 0.32])
 
+def project_polygon(points):
+    return [project(pt) + yshift for pt in points]
+
+def draw_polygon2D(points, **kwargs):
+    return draw.Lines(*(x for pt in points for x in pt), close = True, **kwargs)
+
+def draw_polygon(points, **kwargs):
+    return draw_polygon2D(project_polygon(points), **kwargs)
+
+border_factor = 1.015
+border_points = u_plane[:3] + [r_plane[3], r_plane[0]] + [f_plane[0]]
+border_points = scale_polygon(project_polygon(border_points), factor = border_factor)
 
 
 if __name__ == '__main__':
 
 
-    # arr = [-3, -1, 1, 3]
-    # grid = list(itertools.product(arr, arr, arr))
-    # edges = []
-    # for pair in itertools.combinations(grid, 2):
-    #     if sum((i1 == i2) for (i1, i2) in zip(*pair)) == 2:
-    #         edges.append(pair)
+    d = draw.Drawing(9.4, 9.4, origin = 'center')
 
-    d = draw.Drawing(10, 10, origin = 'center')
+    # draw outer border
+    d.append(draw_polygon2D(border_points, fill = border_gray))
 
-    yshift = np.array([0, 0.3])
-
-    d.append(draw.Rectangle(-100, -100, 200, 200, stroke_width = 0, fill = '#ff0000'))
+    # draw white planes
+    for sq in [u_plane, f_plane, r_plane]:
+        d.append(draw_polygon(sq, fill = white))
 
     for (sq, color) in square_colors.items():
-        points = [project(pt) + yshift for pt in sq]
-        d.append(draw.Lines(*(x for pt in points for x in pt), close = True, fill = color, stroke_width = 0))
+        # draw outer squares
+        d.append(draw_polygon(sq, fill = white, stroke_width = 0))
 
-    for line in lines:
-        stroke_width = line_width
-        if is_top_point(line[0]) or is_top_point(line[1]):
-            stroke_width *= top_line_width_scale
-        points = [project(pt) + yshift for pt in line]
-        d.append(draw.Line(*(x for pt in points for x in pt), stroke = white, stroke_width = stroke_width))
-
+        # draw inner squares
+        inner_points = scale_polygon(sq, factor = square_factor)
+        d.append(draw_polygon(inner_points, fill = color, stroke_width = 0))
 
     d.setPixelScale(100)
     d.saveSvg('logo.svg')

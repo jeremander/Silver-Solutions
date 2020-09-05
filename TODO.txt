@@ -1,7 +1,5 @@
 Jeremy
 ------
-- Testimonials
-- Resume samples
 - GIF animation
 - Our services click issue
 
