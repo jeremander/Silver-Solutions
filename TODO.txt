@@ -5,14 +5,12 @@ Jeremy
 
 Denise
 ------
-- Ask Bayada for permission
 - Improve bios
-- Resume content
 
 Jonathan
 --------
 - Icons
-    - Maybe have numbers on the corners of them?
+    - Tweak graphic design icons
 - Additional set of slides for product design
 - Choose image to put in the bottom of your bio
 - Update your bio to the way you want it to be (we can help edit)
