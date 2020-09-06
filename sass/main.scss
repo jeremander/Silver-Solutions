@@ -1587,16 +1587,6 @@ table {
 /* Resumes */
 
 .page-content.resumes {
-    // tweak secondary navbar since there are more sections
-    @include breakpoint("<=thin") {
-        article:first-child .section-header {
-            margin-top: 0em;
-        }
-
-        .sidebar {
-            height: 8.75em;
-        }
-    }
 
     .sample-resumes {
         margin: 0em 2em 0em 2em !important;
