@@ -1,6 +1,8 @@
 Jeremy
 ------
-- GIF animation
+- new graphics banner photo (maybe)
+- lay out bio
+- figure out Jonathan's sections
 - Our services click issue
 
 Denise

@@ -1314,7 +1314,7 @@ table {
 
                 &.graphics-banner {
                     .banner-slide {
-                        background-image: url(../images/banners/graphics.png) !important;
+                        background-image: url(../images/banners/graphics.jpg) !important;
                         animation-name: none !important;
                     }
                 }
@@ -1528,14 +1528,13 @@ table {
     }
 }
 
-/* Presentations */
+/* Animation Slides */
 
-#pres-animation {
+.animation-slides {
     text-align: center;
-    margin-top: 2em;
+    margin-top: 2em !important;
 
     img {
-        // width: 648px;
         width: 85%;
 
         @include breakpoint('<=thin') {
@@ -1543,6 +1542,8 @@ table {
         }
     }
 }
+
+/* Presentations */
 
 .pres-samples {
 

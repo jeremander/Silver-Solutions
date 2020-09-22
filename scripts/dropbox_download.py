@@ -97,7 +97,7 @@ if __name__ == '__main__':
                         img_to_jpg(dest_path)
 
     # download images
-    subdirs = ['banners', 'icons']
+    subdirs = ['animations', 'banners', 'icons']
     for subdir in subdirs:
         dbx_subdir = f'{DBX_IMG_DIR}/{subdir}'
         img_names = [entry.name for entry in dbx.files_list_folder(dbx_subdir).entries]
