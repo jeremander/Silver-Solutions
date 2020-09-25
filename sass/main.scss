@@ -1585,6 +1585,97 @@ table {
     }
 }
 
+/* Graphic Design */
+
+.graphics-samples {
+
+    h2 {
+        margin: 0em 0em 1.5em 0em;
+    }
+
+    .graphics-sample {
+        div {
+            display: block;
+            text-align: center;
+
+            &.graphics-sample-grid {
+                display: grid;
+                text-align: center;
+            }
+
+            &#buckles-grid {
+                grid-template-columns: 1fr 1fr;
+
+                > div {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 80%;
+                    }
+                }
+            }
+
+            img#buckles {
+                margin: 0 auto;
+                width: 50%;
+            }
+
+            &#invitations-grid {
+                padding: 0 2.5em;
+                grid-template-columns: 2fr 1fr 2fr;
+                grid-gap: 2em;
+
+                > div {
+
+                    img {
+                        display: block;
+                        // height: 100%;
+                        width: 100%;
+                    }
+
+                    &:nth-child(1), &:nth-child(4) {
+                        img {
+                            // height: 100%;
+                            // width: 80%;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        grid-column: 1 / span 1;
+                        text-align: right;
+                        img {
+                            margin: 0 0 0 auto;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        grid-column: 2 / span 2;
+                        align-self: flex-end;
+                    }
+
+                    &:nth-child(3) {
+                        grid-column: 1 / span 2;
+                        align-self: flex-start;
+                    }
+
+                    &:nth-child(4) {
+                        grid-column: 3 / span 1;
+                    }
+
+                    // &:nth-child(2), &:nth-child(3) {
+                    //     img {
+                    //         width: 100%;
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}
+
 /* Resumes */
 
 .page-content.resumes {
