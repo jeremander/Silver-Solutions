@@ -91,22 +91,50 @@
         <div class="graphics-samples">
 
           <div class="graphics-sample-section">
-            <h2>Leatherwork</h2>
+            <h2>Technical Illustrations</h2>
             <div class="graphics-sample">
-              <div class="graphics-sample-grid" id="buckles-grid">
-                <div>
-                  <img src="{{IMAGE}}/graphics/buckle_outline.png">
+              <div class="graphics-sample-grid" id="tech-illustrations-grid">
+                <div id="case-illustration">
+                  <img src="{{IMAGE}}/graphics/technical_illustration/case.jpg">
                 </div>
                 <div>
-                  <img src="{{IMAGE}}/graphics/buckle_outline_color.png">
+                  <img src="{{IMAGE}}/graphics/technical_illustration/fixture.jpg">
                 </div>
-              </div>
-              <br>
-              <div>
-                <img id="buckles" src="{{IMAGE}}/graphics/buckles.jpg"/>
+                <div>
+                  <img src="{{IMAGE}}/graphics/technical_illustration/glasses.jpg">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/technical_illustration/color_studies.jpg">
+                </div>
               </div>
             </div>
           </div>
+
+          <br>
+
+          <div class="graphics-sample-section">
+            <h2>Leatherwork</h2>
+            <div class="graphics-sample">
+              <div class="graphics-sample-grid" id="buckle-grid">
+                <div>
+                  <img src="{{IMAGE}}/graphics/leatherwork/buckle_outline.png">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/leatherwork/buckle_outline_color.png">
+                </div>
+              </div>
+              <br>
+
+              <div class="graphics-sample-grid" id="belt-grid">
+                {% for i in range(1, 7) %}
+                <div>
+                  <img src="{{IMAGE}}/graphics/leatherwork/belt{{i}}.png"/>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
           <br>
 
           <div class="graphics-sample-section">
@@ -114,16 +142,16 @@
             <div class="graphics-sample">
               <div class="graphics-sample-grid" id="invitations-grid">
                 <div>
-                  <img src="{{IMAGE}}/graphics/madison_bday.png">
+                  <img src="{{IMAGE}}/graphics/invitations/madison_bday.png">
                 </div>
                 <div>
-                  <img src="{{IMAGE}}/graphics/erica_engagement.png">
+                  <img src="{{IMAGE}}/graphics/invitations/erica_engagement.png">
                 </div>
                 <div>
-                  <img src="{{IMAGE}}/graphics/martin_bday.png">
+                  <img src="{{IMAGE}}/graphics/invitations/martin_bday.png">
                 </div>
                 <div>
-                  <img src="{{IMAGE}}/graphics/lucas_bday.png">
+                  <img src="{{IMAGE}}/graphics/invitations/lucas_bday.png">
                 </div>
               </div>
               <br>

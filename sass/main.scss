@@ -1593,6 +1593,10 @@ table {
         margin: 0em 0em 1.5em 0em;
     }
 
+    .graphics-sample-section {
+        margin-bottom: 1em;
+    }
+
     .graphics-sample {
         div {
             display: block;
@@ -1606,11 +1610,6 @@ table {
                 @include breakpoint('<=narrower') {
                     padding: 0em 0.5em;
                 }
-            }
-
-            &#buckles-grid {
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 1em;
 
                 > div {
                     display: flex;
@@ -1619,29 +1618,60 @@ table {
                     img {
                         display: block;
                         margin: 0 auto;
-                        width: 100%;
                     }
+                }
+
+            }
+
+            &#tech-illustrations-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2em;
+
+                img {
+                    width: 100%;
+                }
+
+                @include breakpoint('<=thin') {
+                    grid-template-columns: 1fr !important;
+                    // grid-gap: 1.5em;
+                }
+            }
+
+            &#buckle-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 0.25em;
+
+                img {
+                    width: 100%;
                 }
 
                 @include breakpoint('<=thin') {
                     grid-template-columns: 1fr !important;
 
                     img {
-                        width: 85% !important;
+                        width: 80% !important;
                     }
                 }
             }
 
-            img#buckles {
-                margin: 0 auto;
-                width: 50%;
+            &#belt-grid {
+                margin: 0em 2em;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 3em;
+
+                img {
+                    width: 100%;
+                }
 
                 @include breakpoint('<=thin') {
-                    width: 80%;
+                    margin: 0;
+                    grid-template-columns: 1fr 1fr !important;
+                    grid-gap: 1.5em;
                 }
             }
 
             &#invitations-grid {
+                margin: 0;
                 grid-template-columns: 2fr 1fr 2fr;
                 grid-gap: 2em;
 
@@ -1652,7 +1682,6 @@ table {
                 > div {
 
                     img {
-                        display: block;
                         width: 100%;
                     }
 
@@ -1801,12 +1830,12 @@ table {
     .two-column {
         display: grid;
         width: 100%;
-        grid-gap: 2em;
+        grid-gap: 2.5em;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        color: white;
+        // color: white;
 
         .column {
-            background-color: map-get($palette, theme-medium);
+            background-color: map-get($palette, theme-pale);
             border-radius: 6px;
             padding: 0.75em;
             box-shadow: 1px 1px 3px map-get($palette, medium-gray);
@@ -1815,7 +1844,7 @@ table {
         h2, h3 {
             font-weight: bold;
             line-height: 1.25;
-            color: white;
+            //  color: white;
         }
 
         h2 {
@@ -1833,12 +1862,14 @@ table {
             border-radius: 50%;
             overflow: hidden;
         }
-    }
 
-    #jad-book img {
-        margin: 1em 0em 2em 0em;
-        width: 120px;
-        box-shadow: -1px 0px 0px map-get($palette, dark-gray), 3px 1px 2px map-get($palette, dark-gray);
+        .content-pic {
+            margin: 1em 0em;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
