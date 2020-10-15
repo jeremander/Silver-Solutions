@@ -2,12 +2,9 @@
 
 {% set page_name = 'our services' %}
 
-{% block head_scripts %}
-  <script>
-    var img = new Image();
-    img.src = "{{IMAGE}}/banners/resumes0.jpg";
-  </script>
-{% endblock head_scripts %}
+{% block head %}
+  <link rel="preload" href="{{IMAGE}}/banners/resumes0.jpg" as="image">
+{% endblock head %}
 
 {% block content %}
 
