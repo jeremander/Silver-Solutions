@@ -1746,71 +1746,91 @@ table {
         }
     }
 
-    .testimonials {
-        display: grid;
-        height: 100%;
-        margin: 0em 2em 2.5em 2em !important;
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 0em;
-        grid-column-gap: 2em;
+    .testimonials-wrapper {
+        margin: 0em 2em 2.5em 2em;
 
-        .testimonial {
-
-            border: 2px solid map-get($palette, theme-medium);
-            border-radius: 10px;
-            box-shadow: 2px 2px 4px map-get($palette, medium-gray);
-            background-color: map-get($palette, theme-pale);
-
-            .testimonial-grid {
-                display: grid;
-                grid-template-columns: 3em 1fr;
-                grid-column-gap: 1.1em;
-                height: 100%;
-
-                > div {
-                    margin: 0.75em 0.75em 0.75em 0.25em;
-                }
-
-                .giant-quote {
-                    display: flex;
-                    flex-direction: column;
-
-                    div {
-                        font-family: Helvetica;
-                        font-size: 7em;
-                        font-weight: bold;
-                        color: map-get($palette, dark-gray);
-                        padding: 0.33em 0.25em 0em 0em;
-                        cursor: default;
-                        -moz-user-select: -moz-none;
-                        -khtml-user-select: none;
-                        -webkit-user-select: none;
-                    }
-                }
-
-                .testimonial-flex {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-
-                    .testimonial-author {
-                        margin-top: 0.75em;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-
-        @include breakpoint('<=narrower') {
-            grid-template-columns: 1fr;
+        .testimonials {
+            display: grid;
+            height: 100%;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2em;
+            justify-items: center;
 
             .testimonial {
-                margin-bottom: 2em;
-            }
-        }
 
-        @include breakpoint('<=tiny') {
-            margin: 0em 1em !important;
+                border: 2px solid map-get($palette, theme-medium);
+                border-radius: 10px;
+                box-shadow: 2px 2px 4px map-get($palette, medium-gray);
+                background-color: map-get($palette, theme-pale);
+
+                .testimonial-grid {
+                    display: grid;
+                    grid-template-columns: 3em 1fr;
+                    grid-column-gap: 0.9em;
+                    height: 100%;
+                    max-width: 700px;
+
+                    > div {
+                        margin: 0.75em 0.75em 0.75em 0.25em;
+                    }
+
+                    .giant-quote {
+                        display: flex;
+                        flex-direction: column;
+
+                        div {
+                            font-family: Helvetica;
+                            font-size: 6.5em;
+                            font-weight: bold;
+                            color: map-get($palette, dark-gray);
+                            padding: 0.33em 0.25em 0em 0em;
+                            cursor: default;
+                            -moz-user-select: -moz-none;
+                            -khtml-user-select: none;
+                            -webkit-user-select: none;
+                        }
+                    }
+
+                    .testimonial-flex {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .testimonial-author {
+                            margin-top: 0.75em;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                @include breakpoint('>narrower') {
+                    &#testimonial-alexandra {
+                        grid-column: 1 / span 2;
+                        grid-row: 1;
+                    }
+
+                    &#testimonial-reinhard {
+                        grid-column: 3 / span 2;
+                        grid-row: 1;
+                    }
+
+                    &#testimonial-sophia {
+                        grid-column: 2 / span 2;
+                        grid-row: 2;
+                    }
+                }
+            }
+
+
+            @include breakpoint('<=narrower') {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            @include breakpoint('<=tiny') {
+                margin: 0em 0em !important;
+            }
         }
     }
 }
