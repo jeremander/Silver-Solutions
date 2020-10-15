@@ -4,6 +4,8 @@
 
 {% block head %}
   <link rel="preload" href="{{IMAGE}}/banners/presentations0.jpg" as="image">
+  <link rel="preload" href="{{IMAGE}}/banners/presentations1.jpg" as="image">
+  <link rel="preload" href="{{IMAGE}}/banners/presentations2.jpg" as="image">
 {% endblock head %}
 
 {% block content %}
@@ -32,12 +34,12 @@
         <div class="info-page-banner presentations-banner">
           <div class="inner">
             <div class="banner-slides">
-              <div class="banner-slide banner2">
+              <div class="banner-slide banner2" style="background-image: url({{IMAGE}}/banners/presentations2.jpg) !important">
                 <div>
                   <h2>Let us help you tell your story!</h2>
                 </div>
               </div>
-              <div class="banner-slide banner1">
+              <div class="banner-slide banner1" style="background-image: url({{IMAGE}}/banners/presentations1.jpg) !important">
                 <div>
                   <h2>Stressed out by public speaking?</h2>
                 </div>
