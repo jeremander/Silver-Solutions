@@ -2,22 +2,25 @@
 
 {% set page_name = 'home' %}
 
+{% block head %}
+  <link rel="prefetch" href="{{IMAGE}}/banners/presentations0.jpg">
+  <link rel="prefetch" href="{{IMAGE}}/banners/presentations1.jpg">
+  <link rel="prefetch" href="{{IMAGE}}/banners/presentations2.jpg">
+  <link rel="prefetch" href="{{IMAGE}}/banners/graphics.jpg">
+  <link rel="prefetch" href="{{IMAGE}}/banners/resumes0.jpg">
+  <link rel="prefetch" href="{{IMAGE}}/banners/resumes1.jpg">
+  <link rel="prefetch" href="{{IMAGE}}/banners/resumes2.jpg">
+{% endblock head %}
+
 {% block content %}
 
 <!-- Banner -->
-  <div id="banner">
-    <div class="container">
-      <section>
-        <header>
-          <h2>
-            <span class="line">Presenting your</span>
-            <span class="line">best self</span>
-          </h2>
-          <!-- <h2>Presenting your best self</h2> -->
-          <span class="byline">With slides, graphic design, or a résumé, let us help you win over potential clients, employers, and audiences.</span>
-        </header>
-        <!-- <a href="#" class="button">Learn More</a> -->
-      </section>
+  <div id="home-banner">
+    <div>
+      <h2>
+        <span class="line">Communicate with</span>
+        <span class="line">Confidence</span>
+      </h2>
     </div>
   </div>
 
@@ -26,23 +29,21 @@
   <div id="main">
     <div class="container">
 
-      <!-- Row #1 -->
-
         <ul class="featured">
           <li>
-            <span class="pennant"><span class="icon solid fa-flag"></span></span>
-            <h3>Slide Presentations</h3>
-            <p>We team up with you to build a new presentation, energize an existing one, or coach you on your delivery.</p>
+            <a class="badge" href="presentations.html"><img class="home-badge" src="{{IMAGE}}/icons/home_button0.png"/></a>
+            <a href="presentations.html"><h3>Slide Presentations</h3></a>
+            <p><b>We team up</b> with you to build a new presentation, energize an existing one, or coach you on your delivery.</p>
           </li>
           <li>
-            <span class="pennant"><span class="icon solid fa-user"></span></span>
-            <h3>Graphic Design</h3>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue vulputate.</p>
+            <a class="badge" href="graphics.html"><img class="home-badge" src="{{IMAGE}}/icons/home_button1.png"/></a>
+            <a href="graphics.html"><h3>Graphic Design</h3></a>
+            <p><b>We partner</b> to create the visuals you need to inspire, inform, and captivate your audience.</p>
           </li>
           <li>
-            <span class="pennant"><span class="icon solid fa-inbox"></span></span>
-            <h3>Résumés & Interview Coaching</h3>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue vulputate.</p>
+            <a class="badge" href="resumes.html"><img class="home-badge" src="{{IMAGE}}/icons/home_button2.png"/></a>
+            <a href="resumes.html"><h3>Résumés</h3></a>
+            <p><b>We collaborate</b> to craft a powerful résumé that clearly conveys why you are the best candidate for the job.</p>
           </li>
         </ul>
 

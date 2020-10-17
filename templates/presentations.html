@@ -1,0 +1,144 @@
+{% extends "_base.html" %}
+
+{% set page_name = 'our services' %}
+
+{% block head %}
+  <link rel="preload" href="{{IMAGE}}/banners/presentations0.jpg" as="image">
+  <link rel="preload" href="{{IMAGE}}/banners/presentations1.jpg" as="image">
+  <link rel="preload" href="{{IMAGE}}/banners/presentations2.jpg" as="image">
+{% endblock head %}
+
+{% block content %}
+
+<div class="page-content">
+  <div class="info-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="alt">
+        <li class="subpage-link active"><a>Slide Presentations</a></li>
+        <li class="subpage-link"><a>How We Work with You</a></li>
+        <li class="subpage-link"><a>Samples</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <article>
+
+        <header class="section-header">
+          <h1>Slide Presentations</h1>
+        </header>
+
+        <div class="info-page-banner presentations-banner">
+          <div class="inner">
+            <div class="banner-slides">
+              <div class="banner-slide banner2" style="background-image: url({{IMAGE}}/banners/presentations2.jpg) !important">
+                <div>
+                  <h2>Let us help you tell your story!</h2>
+                </div>
+              </div>
+              <div class="banner-slide banner1" style="background-image: url({{IMAGE}}/banners/presentations1.jpg) !important">
+                <div>
+                  <h2>Stressed out by public speaking?</h2>
+                </div>
+              </div>
+              <div class="banner-slide banner0" style="background-image: url({{IMAGE}}/banners/presentations0.jpg) !important">
+                <div>
+                  <h2>Afraid of boring your audience to death?</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-container col-3">
+          <div>
+            <h3>PowerPoint from Scratch</h3>
+            <p>Craft your story through concise, custom slides that stay on brand, hold attention, and tie directly to your goals. Add genuine vigor and visualization to your presentation.</p>
+          </div>
+          <div>
+            <h3>Presentation Makeovers</h3>
+            <p>Refresh content, beef up images, and assure your message hits the mark. Keep out distractions, bullets, and boredom.</p>
+          </div>
+          <div>
+            <h3>Mentoring and Coaching</h3>
+            <p>Share techniques for delivering presentations. Avoid PowerPoint stress, deadline panic, and public speaking anxiety by rehearsing together until you feel confident.</p>
+          </div>
+        </div>
+
+        <div class="animation-slides">
+          <img src="{{IMAGE}}/animations/presentations.gif">
+        </div>
+
+      </article>
+
+      <article>
+
+        <header class="section-header">
+          <h1>How We Work with You</h1>
+        </header>
+
+        <div class="grid-container col-4">
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/pres_icon0.png"/></img>
+            <p>Kick off a project via phone or Zoom. Discuss presentation objectives, target audience, brand identity, and timeline. Brainstorm content ideas and agree on deliverables.</p>
+          </div>
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/pres_icon1.png"/></img>
+            <p>Share slide mockups to finalize creative direction. Agree on preferred "look and feel." Create a first draft presentation for review.</p>
+          </div>
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/pres_icon2.png"/></img>
+            <p>Collaborate to edit/tweak the content. Work until you are totally satisfied with the results.</p>
+          </div>
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/pres_icon3.png"/></img>
+            <p>As an option, rehearse the presentation together. Receive coaching to create stronger impact and relieve stress.</p>
+          </div>
+        </div>
+      </article>
+
+      <article>
+
+        <header class="section-header">
+          <h1>Samples</h1>
+        </header>
+
+        <p>Are you presenting to potential clients, employees, steering committees, or a user conference? Do you want to persuade, inform, or entertain? We have created hundreds of presentations. Here are some.</p>
+
+        <div class="pres-samples">
+
+          {% for (name, examples) in SLIDE_CATEGORIES.items() %}
+            <div class="pres-sample-section">
+              <h2>{{name}}</h2>
+              {% for example in examples %}
+                <div class="pres-sample">
+                  {% for i in range(4) %}
+                    <div><img src="{{SLIDES}}/{{example}}/Slide{{i}}.jpg"/></div>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+  $('#header').addClass('hide-mobile');
+  setupPageSectionObserver();
+</script>
+{% endblock %}

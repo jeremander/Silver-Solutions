@@ -9,11 +9,19 @@ PAGES = {
     'Home' : 'index.html',
     'Our Services' : {
         'Slide Presentations' : 'presentations.html',
-        'Résumés & Interview Coaching' : 'resumes.html',
-        'Facilitated Meetings' : 'meetings.html'
+        'Graphic Design' : 'graphics.html',
+        'Résumés' : 'resumes.html',
     },
     'About Us' : 'about.html',
     'Contact' : 'contact.html'
+}
+
+SLIDE_CATEGORIES = {
+    'Sales and Marketing Pitches' : ['WF', 'sat_prep'],
+    'Training and Webinars' : ['the_business_of_medicine', 'holistic_dentistry'],
+    'User Conferences' : ['alayacare_conference', 'patient_experience'],
+    'Product Design' : ['nike'],
+    'Roasts, Toasts, and Celebrations' : ['new_year_invitation_2020', '50th_anniversary']
 }
 
 CONTEXT = {
@@ -22,6 +30,8 @@ CONTEXT = {
     'SITEURL' : '.',
     'STATIC' : 'static',
     'IMAGE' : 'static/images',
+    'SLIDES' : 'static/images/slides',
+    'SLIDE_CATEGORIES' : SLIDE_CATEGORIES,
     'PAGES' : PAGES
 }
 

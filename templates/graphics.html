@@ -1,0 +1,180 @@
+{% extends "_base.html" %}
+
+{% set page_name = 'our services' %}
+
+{% block head %}
+  <link rel="preload" href="{{IMAGE}}/banners/graphics.jpg" as="image">
+{% endblock head %}
+
+{% block content %}
+
+<div class="page-content">
+  <div class="info-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="alt">
+        <li class="subpage-link active"><a>Graphic Design</a></li>
+        <li class="subpage-link"><a>How We Work with You</a></li>
+        <li class="subpage-link"><a>Samples</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <article>
+
+        <header class="section-header">
+          <h1>Graphic Design</h1>
+        </header>
+
+        <div class="info-page-banner graphics-banner">
+          <div class="inner">
+            <div class="banner-slides">
+              <div class="banner-slide" style="background-image: url({{IMAGE}}/banners/graphics.jpg) !important">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-container col-3">
+
+          <div>
+            <h3>Technical Illustration</h3>
+            <p>Bring your ideas to life through sketches and renderings that help explain your product or process in a way that everyone can understand. From concept to manufacturing to the retail floor, these illustrations visually simplify a complex subject.</p>
+          </div>
+
+          <div>
+            <h3>Product and Packaging Design</h3>
+            <p>Let us help you brand the exterior of your product to attract audiences and differentiate it from your competitors. This includes logos, layout, illustration, and typography. Like any good design, the packaging tells your story.</p>
+          </div>
+
+          <div>
+            <h3>Graphics for Websites </h3>
+            <p>Add graphics to your website that make it visually appealing, hold attention, and complement your messaging. This includes photo enhancement, icon and logo design, and animation.</p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article>
+
+        <header class="section-header">
+          <h1>How We Work with You</h1>
+        </header>
+
+        <div class="grid-container col-3">
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/graphics_icon0.png"/></img>
+            <p>Kick off a project via phone or Zoom. Discuss graphic design objectives, style, influences, target audience, brand identity, and timeline.</p>
+          </div>
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/graphics_icon1.png"/></img>
+            <p>Share digital sketches to determine creative direction. Agree on preferred "look and feel." Create first-draft artwork or mechanicals for review.</p>
+          </div>
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/graphics_icon2.png"/></img>
+            <p>Collaborate to edit/tweak the design. Work until you are totally satisfied with the results.</p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article>
+
+        <header class="section-header">
+          <h1>Samples</h1>
+        </header>
+
+        <div class="graphics-samples">
+
+          <div class="graphics-sample-section">
+            <h2>Technical Illustrations</h2>
+            <div class="graphics-sample">
+              <div class="graphics-sample-grid" id="tech-illustrations-grid">
+                <div id="case-illustration">
+                  <img src="{{IMAGE}}/graphics/technical_illustration/grooming.png">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/technical_illustration/fixture.jpg">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/technical_illustration/martini.png">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/technical_illustration/color_studies.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="graphics-sample-section">
+            <h2>Leatherwork</h2>
+            <div class="graphics-sample">
+              <div class="graphics-sample-grid" id="buckle-grid">
+                <div>
+                  <img src="{{IMAGE}}/graphics/leatherwork/buckle_outline.png">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/leatherwork/buckle_outline_color.png">
+                </div>
+              </div>
+              <br>
+
+              <div class="graphics-sample-grid" id="belt-grid">
+                {% for i in range(1, 7) %}
+                <div>
+                  <img src="{{IMAGE}}/graphics/leatherwork/belt{{i}}.png"/>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="graphics-sample-section">
+            <h2>Party Invitations</h2>
+            <div class="graphics-sample">
+              <div class="graphics-sample-grid" id="invitations-grid">
+                <div>
+                  <img src="{{IMAGE}}/graphics/invitations/madison_bday.jpg">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/invitations/erica_engagement.jpg">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/invitations/martin_bday.jpg">
+                </div>
+                <div>
+                  <img src="{{IMAGE}}/graphics/invitations/lucas_bday.jpg">
+                </div>
+              </div>
+              <br>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+  $('#header').addClass('hide-mobile');
+  setupPageSectionObserver();
+</script>
+{% endblock %}

@@ -1,0 +1,222 @@
+{% extends "_base.html" %}
+
+{% set page_name = 'our services' %}
+
+{% block head %}
+  <link rel="preload" href="{{IMAGE}}/banners/resumes0.jpg" as="image">
+  <link rel="preload" href="{{IMAGE}}/banners/resumes1.jpg" as="image">
+  <link rel="preload" href="{{IMAGE}}/banners/resumes2.jpg" as="image">
+{% endblock head %}
+
+{% block content %}
+
+<div class="page-content resumes">
+  <div class="info-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="alt">
+        <li class="subpage-link active"><a>Résumés</a></li>
+        <li class="subpage-link"><a>How We Work with You</a></li>
+        <li class="subpage-link"><a>Samples & Testimonials</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <article>
+
+        <header class="section-header">
+          <h1>Résumés</h1>
+        </header>
+
+        <div class="info-page-banner resumes-banner">
+          <div class="inner">
+            <div class="banner-slides">
+              <div class="banner-slide banner2" style="background-image: url({{IMAGE}}/banners/resumes2.jpg) !important">
+                <div>
+                  <h2>Let us help you present your best self!</h2>
+                </div>
+              </div>
+              <div class="banner-slide banner1" style="background-image: url({{IMAGE}}/banners/resumes1.jpg) !important">
+                <div>
+                  <h2>Nervous about your next interview?</h2>
+                </div>
+              </div>
+              <div class="banner-slide banner0" style="background-image: url({{IMAGE}}/banners/resumes0.jpg) !important">
+                <div>
+                  <h2>Looking to stand out from the crowd?</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-container col-3">
+
+          <div>
+            <h3>Résumés from Scratch</h3>
+            <p>Develop a professionally written, industry-focused résumé that readies you for an upcoming job interview. Includes a comprehensive analysis of your experience to date and how to showcase your competencies.</p>
+          </div>
+
+          <div>
+            <h3>Résumé Makeovers</h3>
+            <p>Modify content and format of your existing résumé to create a stronger, spot-on version that passes the applicant tracking system screen and attracts your next employer.</p>
+          </div>
+
+          <div>
+            <h3>Interview Coaching</h3>
+            <p>Share techniques for nailing the interview, including simulating an interview experience.</p>
+          </div>
+
+        </div>
+
+        <div class="animation-slides">
+          <img src="{{IMAGE}}/animations/resumes.gif">
+        </div>
+
+      </article>
+
+      <article>
+
+        <header class="section-header">
+          <h1>How We Work with You</h1>
+        </header>
+
+        <div class="grid-container col-4 two-line">
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/resumes_icon0.png"/></img>
+            <p>Kick off a project via phone or Zoom. Discuss your job history and what you are truly looking for in your next job.</p>
+          </div>
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/resumes_icon1.png"/></img>
+            <p>Use a template chosen from our library to create a new résumé, including a professional summary that highlights your achievements, experience, and goals. Tweak the résumé together until satisfied with the results.</p>
+          </div>
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/resumes_icon2.png"/></img>
+            <p>Identify potential jobs from popular websites. Revisit the résumé and update accordingly. Work together to create a template cover letter and update your LinkedIn profile.</p>
+          </div>
+
+          <div>
+            <img class="how-work" src="{{IMAGE}}/icons/resumes_icon3.png"/></img>
+            <p>Build confidence by simulating the interview experience with a mock interview and critiques along the way.</p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article>
+
+        <header class="section-header">
+          <h1>Samples</h1>
+        </header>
+
+        <div class="sample-resumes">
+
+          <div class="sample-resume">
+            <div class="sample-link">
+              <a href="{{IMAGE}}/resumes/sample1.pdf">Sample #1</a>
+            </div>
+            <div class="sample-pdf">
+              <a href="{{IMAGE}}/resumes/sample1.pdf"><img src="{{IMAGE}}/resumes/sample1.jpg" width=100% height=100%></img></a>
+            </div>
+          </div>
+
+          <div class="sample-resume">
+            <div class="sample-link">
+              <a href="{{IMAGE}}/resumes/sample2.pdf">Sample #2</a>
+            </div>
+            <div class="sample-pdf">
+              <a href="{{IMAGE}}/resumes/sample2.pdf"><img src="{{IMAGE}}/resumes/sample2.jpg" width=100% height=100%></img></a>
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+
+        <header class="section-header">
+          <h1>Testimonials</h1>
+        </header>
+
+        <div class="testimonials-wrapper">
+          <div class="testimonials">
+
+            <div class="testimonial" id="testimonial-alexandra">
+              <div class="testimonial-grid">
+                <div class="giant-quote">
+                  <div>
+                    &ldquo;
+                  </div>
+                </div>
+                <div class="testimonial-flex">
+                  <div>
+                    I felt energized working with Denise to prepare my résumé. She built confidence in my skills and experience. She gave me honest and objective feedback. Her individual coaching, encouragement, and support were the best career counseling I could get!
+                  </div>
+                  <div class="testimonial-author">
+                    &mdash; Alexandra S. (Marketing Specialist)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial" id="testimonial-reinhard">
+              <div class="testimonial-grid">
+                <div class="giant-quote">
+                  <div>
+                    &ldquo;
+                  </div>
+                </div>
+                <div class="testimonial-flex">
+                  <div>
+                    Denise worked with me to perfect my résumé and define my brand. She provided helpful career consulting insights and encouragement to keep up my job search momentum. Denise provided an invaluable reality check.
+                  </div>
+                  <div class="testimonial-author">
+                    &mdash; Reinhard Z. (Management Consultant)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial" id="testimonial-sophia">
+              <div class="testimonial-grid">
+                <div class="giant-quote">
+                  <div>
+                    &ldquo;
+                  </div>
+                </div>
+                <div class="testimonial-flex">
+                  <div>
+                    Denise not only transformed my résumé but also instilled in me the confidence I needed to move forward in my job search. I am so grateful for her direction when it came to trimming what wasn't helpful and expanding on assets I didn't realize I brought to the table.
+                  </div>
+                  <div class="testimonial-author">
+                    &mdash; Sophia V. (Marketing Associate)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+  $('#header').addClass('hide-mobile');
+  setupPageSectionObserver();
+</script>
+{% endblock %}

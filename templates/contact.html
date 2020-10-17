@@ -5,6 +5,7 @@
 {% block content %}
 
 <!-- Contact -->
+<div class="page-content">
   <div id="contact">
     <div class="container">
       <section>
@@ -12,23 +13,29 @@
           <h2>Contact Us</h2>
         </header>
       </section>
-      <form method="post" action="#">
-        <div class="row gtr-50 gtr-uniform">
-          <div class="col-6 col-12-narrower">
-            <input name="name" placeholder="Name" type="text" class="text" />
+      <form action="javascript:void(0);">
+        <div class="contact-grid">
+          <div id="contact-name">
+            <input name="name" placeholder="Name" type="text" class="text" required />
           </div>
-          <div class="col-6 col-12-narrower">
-            <input name="email" placeholder="Email" type="text" class="text" />
+          <div id="contact-email">
+            <input name="_replyto" placeholder="Email" type="email" class="text" required />
           </div>
-          <div class="col-12">
-            <textarea name="message" placeholder="Message"></textarea>
+          <div id="contact-message">
+            <textarea name="message" placeholder="Message" required></textarea>
           </div>
-          <div class="col-12">
-            <a href="#" class="button alt">Send Message</a>
+          <div id="contact-submit">
+            <button type="submit" class="button alt">Send Message</button>
           </div>
         </div>
       </form>
     </div>
   </div>
+</div>
+
+<!-- Modal -->
+<div id="submit-success">
+  Great to hear from you!
+</div>
 
 {% endblock content %}
