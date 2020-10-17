@@ -19,11 +19,6 @@
     <meta name="keywords" content="silver, solutions, consulting, presentations"/>
     
 
-    <link rel="shortcut icon" href="static/images/logo.svg">
-
-    
-    
-
   </head>
 
 	<body class="is-preload">
@@ -33,16 +28,9 @@
       <div id="header">
         <div>
 
-          <div id="title-box">
-            <div id="title-grid">
-              <!-- Logo -->
-              <a href="index.html">
-                <img id="logo" src="static/images/logo.svg" />
-              </a>
-
-              <!-- Title -->
-              <h1 id="title"><a href="index.html">Silver Solutions</a></h1>
-            </div>
+          <!-- Logo -->
+          <div id="logo">
+            <h1><a href="index.html">Silver Solutions</a></h1>
           </div>
 
           <!-- Nav -->
@@ -62,9 +50,9 @@
                   
                     <li><a href="presentations.html">Slide Presentations</a></li>
                   
-                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="resumes.html">Résumés & Interview Coaching</a></li>
                   
-                    <li><a href="resumes.html">Résumés</a></li>
+                    <li><a href="meetings.html">Facilitated Meetings</a></li>
                   
                   </ul>
                 
@@ -87,12 +75,9 @@
         </div>
       </div>
 
-      <div id="dummy-header"></div>
-
       
 
 <!-- Contact -->
-<div class="page-content">
   <div id="contact">
     <div class="container">
       <section>
@@ -100,30 +85,24 @@
           <h2>Contact Us</h2>
         </header>
       </section>
-      <form action="javascript:void(0);">
-        <div class="contact-grid">
-          <div id="contact-name">
-            <input name="name" placeholder="Name" type="text" class="text" required />
+      <form method="post" action="#">
+        <div class="row gtr-50 gtr-uniform">
+          <div class="col-6 col-12-narrower">
+            <input name="name" placeholder="Name" type="text" class="text" />
           </div>
-          <div id="contact-email">
-            <input name="_replyto" placeholder="Email" type="email" class="text" required />
+          <div class="col-6 col-12-narrower">
+            <input name="email" placeholder="Email" type="text" class="text" />
           </div>
-          <div id="contact-message">
-            <textarea name="message" placeholder="Message" required></textarea>
+          <div class="col-12">
+            <textarea name="message" placeholder="Message"></textarea>
           </div>
-          <div id="contact-submit">
-            <button type="submit" class="button alt">Send Message</button>
+          <div class="col-12">
+            <a href="#" class="button alt">Send Message</a>
           </div>
         </div>
       </form>
     </div>
   </div>
-</div>
-
-<!-- Modal -->
-<div id="submit-success">
-  Great to hear from you!
-</div>
 
 
 
@@ -148,10 +127,6 @@
     <script src="static/js/breakpoints.min.js"></script>
     <script src="static/js/util.js"></script>
     <script src="static/js/main.js"></script>
-    <script src="static/js/misc.js"></script>
-
-    
-    
 
 	</body>
 </html>

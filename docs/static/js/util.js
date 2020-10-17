@@ -102,6 +102,7 @@
 
 			// Methods.
 				$this._hide = function(event) {
+
 					// Already hidden? Bail.
 						if (!config.target.hasClass(config.visibleClass))
 							return;
@@ -147,6 +148,7 @@
 
 					$this
 						.on('click', 'a', function(event) {
+
 							var $a = $(this),
 								href = $a.attr('href'),
 								target = $a.attr('target');
@@ -177,6 +179,7 @@
 
 			// Event: Touch stuff.
 				$this.on('touchstart', function(event) {
+
 					$this.touchPosX = event.originalEvent.touches[0].pageX;
 					$this.touchPosY = event.originalEvent.touches[0].pageY;
 
