@@ -19,6 +19,18 @@
     <meta name="keywords" content="silver, solutions, consulting, presentations"/>
     
 
+    <link rel="shortcut icon" href="static/images/logo.svg">
+
+    
+  <link rel="prefetch" href="static/images/banners/presentations0.jpg">
+  <link rel="prefetch" href="static/images/banners/presentations1.jpg">
+  <link rel="prefetch" href="static/images/banners/presentations2.jpg">
+  <link rel="prefetch" href="static/images/banners/graphics.jpg">
+  <link rel="prefetch" href="static/images/banners/resumes0.jpg">
+  <link rel="prefetch" href="static/images/banners/resumes1.jpg">
+  <link rel="prefetch" href="static/images/banners/resumes2.jpg">
+
+
   </head>
 
 	<body class="is-preload">
@@ -28,9 +40,16 @@
       <div id="header">
         <div>
 
-          <!-- Logo -->
-          <div id="logo">
-            <h1><a href="index.html">Silver Solutions</a></h1>
+          <div id="title-box">
+            <div id="title-grid">
+              <!-- Logo -->
+              <a href="index.html">
+                <img id="logo" src="static/images/logo.svg" />
+              </a>
+
+              <!-- Title -->
+              <h1 id="title"><a href="index.html">Silver Solutions</a></h1>
+            </div>
           </div>
 
           <!-- Nav -->
@@ -50,9 +69,9 @@
                   
                     <li><a href="presentations.html">Slide Presentations</a></li>
                   
-                    <li><a href="resumes.html">Résumés & Interview Coaching</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
                   
-                    <li><a href="meetings.html">Facilitated Meetings</a></li>
+                    <li><a href="resumes.html">Résumés</a></li>
                   
                   </ul>
                 
@@ -75,22 +94,17 @@
         </div>
       </div>
 
+      <div id="dummy-header"></div>
+
       
 
 <!-- Banner -->
-  <div id="banner">
-    <div class="container">
-      <section>
-        <header>
-          <h2>
-            <span class="line">Presenting your</span>
-            <span class="line">best self</span>
-          </h2>
-          <!-- <h2>Presenting your best self</h2> -->
-          <span class="byline">With slides, graphic design, or a résumé, let us help you win over potential clients, employers, and audiences.</span>
-        </header>
-        <!-- <a href="#" class="button">Learn More</a> -->
-      </section>
+  <div id="home-banner">
+    <div>
+      <h2>
+        <span class="line">Communicate with</span>
+        <span class="line">Confidence</span>
+      </h2>
     </div>
   </div>
 
@@ -99,23 +113,21 @@
   <div id="main">
     <div class="container">
 
-      <!-- Row #1 -->
-
         <ul class="featured">
           <li>
-            <span class="pennant"><span class="icon solid fa-flag"></span></span>
-            <h3>Slide Presentations</h3>
-            <p>We team up with you to build a new presentation, energize an existing one, or coach you on your delivery.</p>
+            <a class="badge" href="presentations.html"><img class="home-badge" src="static/images/icons/home_button0.png"/></a>
+            <a href="presentations.html"><h3>Slide Presentations</h3></a>
+            <p><b>We team up</b> with you to build a new presentation, energize an existing one, or coach you on your delivery.</p>
           </li>
           <li>
-            <span class="pennant"><span class="icon solid fa-user"></span></span>
-            <h3>Graphic Design</h3>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue vulputate.</p>
+            <a class="badge" href="graphics.html"><img class="home-badge" src="static/images/icons/home_button1.png"/></a>
+            <a href="graphics.html"><h3>Graphic Design</h3></a>
+            <p><b>We partner</b> to create the visuals you need to inspire, inform, and captivate your audience.</p>
           </li>
           <li>
-            <span class="pennant"><span class="icon solid fa-inbox"></span></span>
-            <h3>Résumés & Interview Coaching</h3>
-            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue vulputate.</p>
+            <a class="badge" href="resumes.html"><img class="home-badge" src="static/images/icons/home_button2.png"/></a>
+            <a href="resumes.html"><h3>Résumés</h3></a>
+            <p><b>We collaborate</b> to craft a powerful résumé that clearly conveys why you are the best candidate for the job.</p>
           </li>
         </ul>
 
@@ -145,6 +157,10 @@
     <script src="static/js/breakpoints.min.js"></script>
     <script src="static/js/util.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/misc.js"></script>
+
+    
+    
 
 	</body>
 </html>
