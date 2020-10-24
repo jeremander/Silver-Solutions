@@ -39,13 +39,6 @@ jobs:
         destination: templates/static/css/main.css
     - name: Build site from templates
       run: python build.py -o /tmp/docs
-    # - name: Test1
-    #   run: |
-    #     pwd
-    #     ls -la
-    #     ls -la templates
-    #     ls -la templates/static/css
-    #     ls -la /tmp/docs/
     - name: Checkout destination Git branch
       uses: actions/checkout@v2
       with:
@@ -53,16 +46,6 @@ jobs:
           fetch-depth: 1
     - name: Move compiled CSS to path within master branch
       run: rsync -a /tmp/docs/ docs/
-    # - name: Test2
-    #   run: |
-    #     pwd
-    #     ls -la
-    #     ls -la docs/
-    # - name: Archive the compiled site
-    #   uses: actions/upload-artifact@v1
-    #   with:
-    #     name: output
-    #     path: output
     - name: Add and commit changes to master branch
       run: |
         git config --local user.email 'action@github.com'
