@@ -1,7 +1,5 @@
 Jeremy
 ------
-- deployment & DNS
-- email domain
 - Our services click issue
 
 Denise

@@ -1,30 +1,65 @@
+// remove all but the first three sections from top navbar when window is narrow
+// merge samples & testimonials to consolidate space
+function setupSubpageLinks() {
+  const isMobile = $(window).width() <= 552;
+  const links = $('.sidebar').find('li');
+  for (i = 0; i < links.length; ++i) {
+    let link = links.get(i);
+    if (isMobile) {
+      if (link.textContent == 'Samples') {
+        $(link).children('a')[0].textContent = 'Samples & Testimonials';
+      }
+      if (i > 2) {
+        $(link).hide();
+      }
+      window.localStorage.setItem('numVisibleLinks', Math.min(3, links.length));
+    }
+    else {
+      if (link.textContent == 'Samples & Testimonials') {
+        $(link).children('a')[0].textContent = 'Samples';
+      }
+      $(link).show();
+      window.localStorage.setItem('numVisibleLinks', links.length);
+    }
+  }
+}
+
+$(window).resize(setupSubpageLinks);
+
+function highlightPageSection(i) {
+  const nav_links = $('.info-page .sidebar ul');
+  const active_link = nav_links.find('.active');
+  const new_link = nav_links.children().get((i == null) ? 0 : i);
+  active_link.removeClass('active');
+  $(new_link).addClass('active');
+  window.localStorage.setItem('currentPageSection', i);
+  window.localStorage.setItem('pageSectionRefresh', 1);
+}
+
+// page section highlighting
+function highlightCurrentPageSection() {
+  const i = window.localStorage.getItem('currentPageSection');
+  highlightPageSection(i);
+}
+
 // switch between subpages by clicking on links
-$('.subpage-link').click(function() {
+$('.subpage-link').click(function () {
   const li = $(this).closest('li');
   const lis = $(this).closest('ul').children();
   const i = lis.index(li);
-  lis.removeClass('active');
-  li.addClass('active');
-  window.localStorage.setItem('currentPageSection', i);
+  // lis.removeClass('active');
+  // li.addClass('active');
+  // window.localStorage.setItem('currentPageSection', i);
   const articles = $(this).closest('.info-page').find('article');
   $(articles.get(i))[0].scrollIntoView();
   const topbar = ($(window).width() <= 960) ? '.sidebar' : '#header';
   const offset = $(topbar).outerHeight() + 30;
   // compensate for nav bar height
   window.scrollBy(0, -offset);
+  highlightPageSection(i);
+  // signal not to refresh the page section since we just set it manually
+  window.localStorage.setItem('pageSectionRefresh', 0);
 });
-
-// page section highlighting
-
-function highlightCurrentPageSection() {
-  const nav_links = $('.info-page .sidebar ul');
-  const active_link = nav_links.find('.active')
-  const i = window.localStorage.getItem('currentPageSection');
-  // alert(i);
-  const new_link = nav_links.children().get((i == null) ? 0 : i);
-  active_link.removeClass('active');
-  $(new_link).addClass('active');
-}
 
 function setupPageSectionObserver() {
   $('.info-page article').each(function() {
@@ -49,10 +84,16 @@ function setupPageSectionObserver() {
     const article = $(target).parent();
     const articles = $(target).closest('.content').children();
     const overlaps = articles.map(elementOverlapsMidpoint);
-    const i = overlaps.index(true);
-
-    window.localStorage.setItem('currentPageSection', i);
-    highlightCurrentPageSection();
+    let i = overlaps.index(true);
+    let shouldRefresh = window.localStorage.getItem('pageSectionRefresh');
+    let numVisibleLinks = window.localStorage.getItem('numVisibleLinks');
+    if (shouldRefresh == 1) {
+      if (i >= numVisibleLinks) {
+        i = numVisibleLinks - 1;
+      }
+      highlightPageSection(i);
+    }
+    window.localStorage.setItem('pageSectionRefresh', 1);
   }, { threshold: [0.0, 0.1, 0.2, 0.3] });
 
   const observe = function() {
@@ -87,6 +128,7 @@ $("#contact form").submit(function(e) {
 });
 
 $(document).ready(function() {
+  setupSubpageLinks();
   highlightCurrentPageSection();
 
   // delay loading the second & third banner images

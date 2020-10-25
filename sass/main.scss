@@ -1095,7 +1095,7 @@ table {
                     &:hover {
                         background-color: map-get($palette, theme-light);
                         a {
-                            color: white;
+                            color: white !important;
                         }
                     }
 
@@ -1103,7 +1103,7 @@ table {
                         background-color: map-get($palette, theme-medium);
 
                         a {
-                            color: white;
+                            color: white !important;
                         }
                     }
                 }
@@ -1468,6 +1468,12 @@ table {
 
                         a {
                             color: black;
+                        }
+
+                        @include breakpoint('>=mobile') {
+                            &:first-child {
+                                margin-left: 6em;
+                            }
                         }
                     }
                 }
@@ -1923,11 +1929,17 @@ table {
 
         header {
             padding: 2em 0em 2em 0em;
+            color: white;
 
             h2 {
+                color: inherit !important;
                 font-size: 2em;
                 font-weight: bold;
-                color: white;
+            }
+
+            p {
+                margin: 1.25em 1em 0em 1em;
+                font-size: 1.5em;
             }
         }
 
