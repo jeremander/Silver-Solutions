@@ -1756,16 +1756,9 @@ table {
         display: grid;
         height: 100%;
         margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
         justify-items: center;
-
-        &.testimonials-presentations {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        &.testimonials-resumes {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
 
         .testimonial {
 
@@ -1812,25 +1805,7 @@ table {
                     }
                 }
             }
-
-            @include breakpoint('>narrower') {
-                &#testimonial-alexandra {
-                    grid-column: 1 / span 2;
-                    grid-row: 1;
-                }
-
-                &#testimonial-reinhard {
-                    grid-column: 3 / span 2;
-                    grid-row: 1;
-                }
-
-                &#testimonial-sophia {
-                    grid-column: 2 / span 2;
-                    grid-row: 2;
-                }
-            }
         }
-
 
         @include breakpoint('<=narrower') {
             grid-template-columns: 1fr !important;
