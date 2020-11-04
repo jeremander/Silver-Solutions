@@ -10,7 +10,7 @@ PAGES = {
     'Our Services' : {
         'Slide Presentations' : 'presentations.html',
         'Graphic Design' : 'graphics.html',
-        'Résumés' : 'resumes.html',
+        'Career Services' : 'resumes.html',
     },
     'About Us' : 'about.html',
     'Contact' : 'contact.html'
