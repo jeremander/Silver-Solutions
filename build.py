@@ -17,7 +17,7 @@ PAGES = {
 }
 
 SLIDE_CATEGORIES = {
-    'Sales and Marketing Pitches' : ['WF', 'sat_prep'],
+    'Sales and Marketing Pitch Decks' : ['WF', 'sat_prep'],
     'Training and Webinars' : ['the_business_of_medicine', 'holistic_dentistry'],
     'User Conferences' : ['alayacare_conference', 'patient_experience'],
     'Product Design' : ['nike'],
