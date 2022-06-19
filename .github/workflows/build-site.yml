@@ -33,7 +33,7 @@ jobs:
     - name: Install Python dependencies
       run: pip install -r requirements.txt
     - name: Build CSS from Sass
-      uses: gha-utilities/sass-build@v0.2.5
+      uses: gha-utilities/sass-build@v0.4.9
       with:
         source: sass/main.scss
         destination: templates/static/css/main.css
