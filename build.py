@@ -8,9 +8,9 @@ from staticjinja import Site
 PAGES = {
     'Home' : 'index.html',
     'Our Services' : {
+        'Résumés & Coaching' : 'resumes.html',
         'Slide Presentations' : 'presentations.html',
         'Graphic Design' : 'graphics.html',
-        'Résumés & Coaching' : 'resumes.html',
     },
     'About Us' : 'about.html',
     'Contact' : 'contact.html'
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     sass_args.append('--watch' if args.watch else '--update')
     print(' '.join(sass_args))
 
-    site = Site.make_site(searchpath = 'templates', outpath = args.output_dir, env_globals = CONTEXT, staticpaths = [f'static/'])
+    site = Site.make_site(searchpath = 'templates', outpath = args.output_dir, env_globals = CONTEXT, staticpaths = ['static/'])
 
     if args.watch:
         with subprocess.Popen(sass_args) as proc:
